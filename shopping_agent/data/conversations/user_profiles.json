@@ -1,0 +1,77 @@
+{
+  "new_test_user_001": {
+    "user_id": "new_test_user_001",
+    "display_name": null,
+    "created_at": "2026-03-20T20:54:44.849945",
+    "last_updated": "2026-03-20T20:54:45.663214",
+    "interaction_count": 6,
+    "total_sessions": 0,
+    "last_session_date": null,
+    "common_intents": {
+      "greeting": 1,
+      "search": 3,
+      "refine": 1,
+      "compare": 1
+    },
+    "common_categories": {
+      "Electronics": 10.0
+    },
+    "common_brands": {
+      "Samsung": 10.0
+    },
+    "common_features": {
+      "design": 1.0,
+      "camera": 1.0
+    },
+    "verbosity_preference": "normal",
+    "prefers_detailed_specs": false,
+    "prefers_alternatives": true,
+    "prefers_price_comparison": true,
+    "purchase_categories": [],
+    "avg_purchase_price": 0.0
+  },
+  "returning_test_user_002": {
+    "user_id": "returning_test_user_002",
+    "display_name": "John",
+    "created_at": "2026-03-20T20:54:45.246888",
+    "last_updated": "2026-03-20T20:54:45.259770",
+    "interaction_count": 16,
+    "total_sessions": 0,
+    "last_session_date": null,
+    "common_intents": {
+      "greeting": 1
+    },
+    "common_categories": {},
+    "common_brands": {},
+    "common_features": {},
+    "verbosity_preference": "normal",
+    "prefers_detailed_specs": false,
+    "prefers_alternatives": true,
+    "prefers_price_comparison": true,
+    "purchase_categories": [],
+    "avg_purchase_price": 0.0
+  },
+  "frequent_test_user_003": {
+    "user_id": "frequent_test_user_003",
+    "display_name": null,
+    "created_at": "2026-03-20T20:54:45.297930",
+    "last_updated": "2026-03-20T20:54:45.397538",
+    "interaction_count": 61,
+    "total_sessions": 0,
+    "last_session_date": null,
+    "common_intents": {
+      "search": 1
+    },
+    "common_categories": {
+      "Electronics": 2.0
+    },
+    "common_brands": {},
+    "common_features": {},
+    "verbosity_preference": "brief",
+    "prefers_detailed_specs": false,
+    "prefers_alternatives": true,
+    "prefers_price_comparison": true,
+    "purchase_categories": [],
+    "avg_purchase_price": 0.0
+  }
+}

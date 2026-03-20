@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Shopping Agent</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Auth Container (Login/Register) -->
+    <div class="auth-container" id="auth-container">
+        <div class="auth-box">
+            <div class="auth-header">
+                <span class="logo-icon">🛒</span>
+                <h1>ShopAI</h1>
+                <p>Your Personal Shopping Assistant</p>
+            </div>
+
+            <!-- Login Form -->
+            <form class="auth-form" id="login-form">
+                <h2>Welcome Back</h2>
+                <div class="form-group">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="auth-btn">Login</button>
+                <p class="auth-switch">
+                    Don't have an account? <a href="#" id="show-register">Sign up</a>
+                </p>
+                <div class="auth-divider">
+                    <span>or</span>
+                </div>
+                <button type="button" class="auth-btn admin-btn" id="show-admin-login">
+                    🔐 Admin Login
+                </button>
+            </form>
+
+            <!-- Register Form -->
+            <form class="auth-form hidden" id="register-form">
+                <h2>Create Account</h2>
+                <div class="form-group">
+                    <label for="register-name">Full Name</label>
+                    <input type="text" id="register-name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="register-phone">Phone (optional)</label>
+                    <input type="tel" id="register-phone" placeholder="Enter phone number">
+                </div>
+                <div class="form-group">
+                    <label for="register-location">Location</label>
+                    <select id="register-location">
+                        <option value="">Select your city</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bangalore">Bangalore</option>
+                        <option value="Hyderabad">Hyderabad</option>
+                        <option value="Chennai">Chennai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="register-password">Password</label>
+                    <input type="password" id="register-password" placeholder="Create a password (min 6 chars)" required minlength="6">
+                </div>
+                <button type="submit" class="auth-btn">Create Account</button>
+                <p class="auth-switch">
+                    Already have an account? <a href="#" id="show-login">Login</a>
+                </p>
+            </form>
+
+            <!-- Admin Login Form -->
+            <form class="auth-form hidden" id="admin-login-form">
+                <h2>🔐 Admin Login</h2>
+                <div class="form-group">
+                    <label for="admin-email">Admin Email</label>
+                    <input type="email" id="admin-email" placeholder="Enter admin email" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" placeholder="Enter admin password" required>
+                </div>
+                <button type="submit" class="auth-btn">Admin Login</button>
+                <p class="auth-switch">
+                    <a href="#" id="back-to-user-login">← Back to User Login</a>
+                </p>
+                <div class="admin-hint">
+                    <small>Default: admin@shopai.com / admin123456</small>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Main App Container -->
+    <div class="app-container hidden" id="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">🛒</span>
+                <span class="logo-text">ShopAI</span>
+            </div>
+
+            <!-- User Info -->
+            <div class="user-info" id="user-info">
+                <div class="user-avatar">👤</div>
+                <div class="user-details">
+                    <span class="user-name" id="current-user-name">Guest</span>
+                    <span class="user-email" id="current-user-email">-</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu" id="nav-menu">
+                <button class="nav-item active" data-view="chat">
+                    <span class="nav-icon">💬</span>
+                    <span>Chat Assistant</span>
+                </button>
+                <button class="nav-item" data-view="browse">
+                    <span class="nav-icon">🏪</span>
+                    <span>Browse Products</span>
+                </button>
+                <button class="nav-item" data-view="recommendations">
+                    <span class="nav-icon">✨</span>
+                    <span>For You</span>
+                </button>
+                <button class="nav-item" data-view="profile">
+                    <span class="nav-icon">👤</span>
+                    <span>My Profile</span>
+                </button>
+                <!-- Admin Menu Items (hidden by default) -->
+                <div class="admin-nav hidden" id="admin-nav">
+                    <div class="nav-divider">Admin Panel</div>
+                    <button class="nav-item" data-view="admin-dashboard">
+                        <span class="nav-icon">📊</span>
+                        <span>Dashboard</span>
+                    </button>
+                    <button class="nav-item" data-view="admin-users">
+                        <span class="nav-icon">👥</span>
+                        <span>Manage Users</span>
+                    </button>
+                    <button class="nav-item" data-view="admin-products">
+                        <span class="nav-icon">📦</span>
+                        <span>Manage Products</span>
+                    </button>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="api-status">
+                    <span class="status-dot" id="status-dot"></span>
+                    <span id="status-text">Checking API...</span>
+                </div>
+                <button class="logout-btn" id="logout-btn">
+                    <span>🚪</span>
+                    <span>Logout</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Chat View -->
+            <section class="view active" id="chat-view">
+                <div class="view-header">
+                    <h1>Shopping Assistant</h1>
+                    <p>Ask me anything about products!</p>
+                </div>
+
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="message bot">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                <p>Hello! I'm your personal shopping assistant. I can help you:</p>
+                                <ul>
+                                    <li>Find products (e.g., "Show me phones under 15000")</li>
+                                    <li>Compare items (e.g., "Compare Samsung and Apple phones")</li>
+                                    <li>Filter by features (e.g., "Laptops with good battery")</li>
+                                </ul>
+                                <p>What are you looking for today?</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="chat-input-container">
+                        <div class="quick-queries">
+                            <button class="quick-query" data-query="Show me phones under 15000">📱 Phones under ₹15K</button>
+                            <button class="quick-query" data-query="Best laptops for work">💻 Work Laptops</button>
+                            <button class="quick-query" data-query="Affordable headphones with good bass">🎧 Headphones</button>
+                            <button class="quick-query" data-query="Nike sports shoes">👟 Nike Shoes</button>
+                        </div>
+                        <form class="chat-form" id="chat-form">
+                            <input type="text" id="chat-input" placeholder="Type your message..." autocomplete="off">
+                            <button type="submit" class="send-btn">
+                                <span>Send</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Browse View -->
+            <section class="view" id="browse-view">
+                <div class="view-header">
+                    <h1>Browse Products</h1>
+                    <p>Explore our product catalog</p>
+                </div>
+
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label>Category</label>
+                        <select id="filter-category">
+                            <option value="">All Categories</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Brand</label>
+                        <select id="filter-brand">
+                            <option value="">All Brands</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Max Price</label>
+                        <input type="number" id="filter-max-price" placeholder="Any price">
+                    </div>
+                    <button class="filter-btn" id="apply-filters">Apply Filters</button>
+                </div>
+
+                <div class="products-grid" id="browse-products">
+                    <!-- Products loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Recommendations View -->
+            <section class="view" id="recommendations-view">
+                <div class="view-header">
+                    <h1>Recommended For You</h1>
+                    <p>Personalized picks based on your preferences</p>
+                </div>
+
+                <div class="recommendation-filters">
+                    <button class="rec-filter active" data-filter="">All</button>
+                    <button class="rec-filter" data-filter="Electronics">Electronics</button>
+                    <button class="rec-filter" data-filter="Clothing">Clothing</button>
+                    <button class="rec-filter" data-filter="Home & Kitchen">Home</button>
+                    <button class="rec-filter" data-filter="Books">Books</button>
+                </div>
+
+                <div class="products-grid" id="recommendation-products">
+                    <!-- Recommendations loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Profile View -->
+            <section class="view" id="profile-view">
+                <div class="view-header">
+                    <h1>My Profile</h1>
+                    <p>Your shopping preferences and activity</p>
+                </div>
+
+                <div class="profile-container">
+                    <div class="profile-card">
+                        <h3>User Information</h3>
+                        <div class="profile-info" id="profile-info">
+                            <div class="info-row">
+                                <span class="info-label">User ID:</span>
+                                <span class="info-value" id="profile-user-id">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Name:</span>
+                                <span class="info-value" id="profile-name">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Email:</span>
+                                <span class="info-value" id="profile-email">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Engagement Score:</span>
+                                <span class="info-value" id="profile-engagement">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Total Interactions:</span>
+                                <span class="info-value" id="profile-interactions">-</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Average Spending:</span>
+                                <span class="info-value" id="profile-spending">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Favorite Categories</h3>
+                        <div class="tags-container" id="favorite-categories">
+                            <!-- Tags loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Preferred Brands</h3>
+                        <div class="tags-container" id="favorite-brands">
+                            <!-- Tags loaded dynamically -->
+                        </div>
+                    </div>
+
+                    <div class="profile-card">
+                        <h3>Price Range Preference</h3>
+                        <div class="price-range" id="price-range">
+                            <span class="price-min">₹0</span>
+                            <div class="price-bar">
+                                <div class="price-fill" id="price-fill"></div>
+                            </div>
+                            <span class="price-max">₹100,000</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Dashboard View -->
+            <section class="view" id="admin-dashboard-view">
+                <div class="view-header">
+                    <h1>📊 Admin Dashboard</h1>
+                    <p>System overview and statistics</p>
+                </div>
+
+                <div class="stats-grid" id="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-users">0</span>
+                            <span class="stat-label">Total Users</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-products">0</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-interactions">0</span>
+                            <span class="stat-label">Interactions</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🏷️</div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="stat-categories">0</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin-actions">
+                    <h3>Quick Actions</h3>
+                    <div class="action-buttons">
+                        <button class="action-btn" id="seed-database-btn">
+                            <span>🌱</span>
+                            <span>Seed Database</span>
+                        </button>
+                        <button class="action-btn" id="refresh-stats-btn">
+                            <span>🔄</span>
+                            <span>Refresh Stats</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Admin Users View -->
+            <section class="view" id="admin-users-view">
+                <div class="view-header">
+                    <h1>👥 Manage Users</h1>
+                    <p>View and manage user accounts</p>
+                </div>
+
+                <div class="admin-table-container">
+                    <table class="admin-table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>User ID</th>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-table-body">
+                            <!-- Users loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="users-pagination">
+                    <!-- Pagination loaded dynamically -->
+                </div>
+            </section>
+
+            <!-- Admin Products View -->
+            <section class="view" id="admin-products-view">
+                <div class="view-header">
+                    <h1>📦 Manage Products</h1>
+                    <p>View and manage product catalog</p>
+                </div>
+
+                <div class="admin-toolbar">
+                    <button class="action-btn primary" id="add-product-btn">
+                        <span>➕</span>
+                        <span>Add Product</span>
+                    </button>
+                </div>
+
+                <div class="admin-table-container">
+                    <table class="admin-table" id="products-table">
+                        <thead>
+                            <tr>
+                                <th>Product ID</th>
+                                <th>Name</th>
+                                <th>Category</th>
+                                <th>Brand</th>
+                                <th>Price</th>
+                                <th>Rating</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table-body">
+                            <!-- Products loaded dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination" id="products-pagination">
+                    <!-- Pagination loaded dynamically -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Product Modal -->
+        <div class="modal" id="product-modal">
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close">&times;</button>
+                <div class="modal-body" id="modal-body">
+                    <!-- Product details loaded dynamically -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notifications -->
+        <div class="toast-container" id="toast-container"></div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
