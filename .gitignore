@@ -1,0 +1,11 @@
+*.pkl
+*.pth
+*.bin
+*.h5
+*.model
+shopping_agent/models/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store
+*.log
