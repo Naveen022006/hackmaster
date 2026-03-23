@@ -1349,85 +1349,102 @@ class ResponseGenerator:
         # Response starters by intent
         self.intent_openers = {
             "search": [
-                "Here's what I found for you:",
-                "I found some great options:",
-                "Check out these results:",
+                "Great! Here are the best matches for your search:",
+                "I found some excellent options that fit your needs:",
+                "Perfect! Here are products that match what you're looking for:",
+                "Awesome! Check out these highly-rated options:",
             ],
             "buy": [
-                "Great choice! Here are your options:",
-                "Ready to help you decide:",
-                "Let's find the perfect one:",
+                "Excellent choice! Here are your best options:",
+                "Smart selection! Let me show you the perfect fit:",
+                "Great idea! Here are the top candidates:",
+                "Perfect! Here's what I recommend:",
             ],
             "compare": [
-                "Let me help you compare:",
-                "Here's the comparison:",
-                "Comparing your options:",
+                "Let me break down the key differences:",
+                "Here's a detailed comparison to help you decide:",
+                "Great question! Here's how they stack up:",
+                "Side-by-side comparison coming right up:",
             ],
             "filter": [
-                "Filtered results:",
-                "Narrowing it down:",
-                "Here's what matches:",
+                "Perfect filters! Here are your refined options:",
+                "Narrowing down nicely! Here's what matches:",
+                "Excellent criteria! Check these out:",
+                "Smart filtering! Here's what I found:",
             ],
             "recommendation": [
-                "Based on your preferences:",
-                "I think you'll love these:",
-                "My top picks for you:",
+                "Based on your shopping history, I think you'll love these:",
+                "My AI-powered picks just for you:",
+                "Perfect for your interests! Check these out:",
+                "Tailored recommendations based on your preferences:",
             ],
             "refine": [
-                "Got it, here are more options:",
-                "Sure, let me show you alternatives:",
-                "Adjusting your search:",
+                "Absolutely! Here are more options:",
+                "Sure thing! Let me show you alternatives:",
+                "Good call! Here are other great choices:",
+                "Got it! Here are more options to explore:",
             ],
             "inquiry": [
-                "Let me check that for you:",
-                "Here's what I found:",
-                "Good question!",
+                "Great question! Here's what I found:",
+                "Let me help with that:",
+                "Perfect - I have that info for you:",
+                "Absolutely! Here's the breakdown:",
             ]
         }
 
         # Refinement acknowledgments
         self.refinement_acks = [
-            "Got it",
-            "Sure",
-            "Okay",
-            "Perfect",
-            "Understood",
+            "Got it! 👍",
+            "Sure thing",
+            "Absolutely",
+            "Perfect, filtering now",
+            "Understood, let me adjust",
+            "Smart choice!",
+            "Great idea",
         ]
 
         # Context connectors
         self.context_connectors = [
             "Continuing from your search",
             "Based on what you were looking at",
-            "Building on your previous query",
+            "Building on your interests",
+            "Following up from your last search",
+            "Staying on the same track",
+            "Related to what you just browsed",
+            "Keeping your preferences in mind",
         ]
 
         self.help_responses = [
-            """I'm your smart shopping assistant! Here's what I can do:
+            """I'm your personal shopping assistant! Here's what I can help you with:
 
-**Search Products**: "Show me phones under 15000" or "Find Samsung laptops"
-**Compare Items**: "Compare iPhone vs Samsung" or "Which laptop is better?"
-**Filter & Sort**: "Budget phones with good camera" or "Top rated headphones"
-**Get Recommendations**: "Recommend something for gaming" or "Suggest a gift"
+📱 **Find Products**: "Show me phones under 15000" or "Find affordable Samsung laptops with good processor"
+⚖️ **Compare Items**: "Compare iPhone 15 vs Samsung S24" or "Which laptop is best for coding?"
+🎯 **Smart Filters**: "Budget gaming phones" or "Top rated wireless earbuds under 3000"
+💡 **Get Recommendations**: "Recommend something for fitness tracking" or "Best value smartphone 2026"
+🔄 **Refine Search**: "Show cheaper options" or "Any other brands?"
 
-Just tell me what you need in your own words!""",
+I'm powered by AI that learns your preferences. The more you shop, the better my recommendations!""",
         ]
 
         self.farewell_responses = [
-            "Thanks for shopping with us! Come back anytime.",
-            "It was great helping you! See you soon.",
-            "Goodbye! Happy shopping!",
+            "Thanks for shopping! Your personalized recommendations will be waiting when you return. 👋",
+            "Great chatting with you! I've noted your preferences for next time. See you soon! 🛍️",
+            "Happy shopping! Feel free to ask anytime - I'm always here to help. Goodbye! 👍",
+            "Thanks for using ShopAI! Come back soon - I'll have even better recommendations for you. 😊",
         ]
 
         self.thanks_responses = [
-            "You're welcome! Let me know if you need anything else.",
-            "Happy to help! Feel free to ask more questions.",
-            "My pleasure! Anything else I can help with?",
+            "You're welcome! 😊 Need help refining your search or comparing options?",
+            "Happy to help! Want me to find something specific or compare products?",
+            "My pleasure! Ask me anything - I can help you find deals, compare brands, or get recommendations.",
+            "Glad I could assist! Ready to explore more options or narrow down your choices?",
         ]
 
         self.no_results_responses = [
-            "I couldn't find exact matches, but here are some similar options:",
-            "No products matched all your filters. Here are close alternatives:",
-            "Your search was quite specific! Here are the closest matches:",
+            "Hmm, no exact matches for that combination, but here are some fantastic alternatives I found:",
+            "Your criteria is pretty specific! Here are similar products that might interest you:",
+            "Couldn't find an exact match, but these come close and offer great value:",
+            "That's a tough combination! Here are the best alternatives I can recommend:",
         ]
 
     def generate(
@@ -1450,18 +1467,34 @@ Just tell me what you need in your own words!""",
         if intent == "general":
             return self._handle_general(entities)
 
+        # Handle no results case early
+        if num_results == 0:
+            return random.choice(self.no_results_responses)
+
         # Build contextual response for product queries
         response_parts = []
 
-        # 1. Acknowledge refinement or context if applicable
+        # 1. For refinements, use acknowledgment if context indicates it
         if context and context.is_refinement:
-            response_parts.append(self._acknowledge_refinement(entities, context))
+            ack = self._acknowledge_refinement(entities, context)
+            response_parts.append(ack)
+            # Add opener after acknowledgment
+            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
+            if opener and "here" not in opener.lower():
+                response_parts.append(opener)
         elif context and context.references_previous:
             response_parts.append(random.choice(self.context_connectors) + ".")
+            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
+            response_parts.append(opener)
+        else:
+            # Add opening based on intent
+            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
+            response_parts.append(opener)
 
-        # 2. Add opening based on intent
-        opener = self._get_intent_opener(intent, entities, num_results, user_profile)
-        response_parts.append(opener)
+        # 2. Add smart summary of what we found
+        summary = self._generate_result_summary(entities, num_results)
+        if summary and intent in ["search", "recommendation", "filter", "refine"]:
+            response_parts.append(summary)
 
         # 3. Mention key filters naturally (if verbose mode)
         if user_profile and user_profile.verbosity_preference != "brief":
@@ -1469,21 +1502,26 @@ Just tell me what you need in your own words!""",
             if filter_mention:
                 response_parts.append(filter_mention)
 
-        # 4. Results context
-        if num_results == 0:
-            return random.choice(self.no_results_responses)
-        elif num_results < 3:
-            response_parts.append(f"Found {num_results} matching products.")
-        else:
-            showing = min(num_results, 10)
-            if user_profile and user_profile.verbosity_preference == "brief":
-                response_parts.append(f"Showing {showing} of {num_results}.")
-            else:
-                response_parts.append(f"Showing top {showing} of {num_results} products.")
+        # 4. Add helpful suggestions based on results and intent
+        tips = self._generate_helpful_tips(intent, entities, num_results)
+        if tips:
+            response_parts.append(tips)
 
-        # 5. Add suggestion for new users
-        if user_profile and user_profile.interaction_count < 3 and num_results > 5:
-            response_parts.append("Feel free to ask me to filter by price, brand, or features!")
+        # 5. Add encouragement for engagement
+        if user_profile and user_profile.interaction_count < 3 and num_results >= 3:
+            response_parts.append("💡 Pro tip: Click products to compare or ask me to find alternatives!")
+
+        # Join response parts with better punctuation
+        if len(response_parts) <= 2:
+            return " ".join(response_parts)
+        else:
+            # Join first parts with periods/semicolons, last part as is
+            main_parts = response_parts[:-1]
+            last_part = response_parts[-1]
+            main_response = " ".join(main_parts)
+            if not main_response.endswith((".", "!", "?")):
+                main_response += "."
+            return main_response + " " + last_part
 
         return " ".join(response_parts)
 
@@ -1506,7 +1544,14 @@ Just tell me what you need in your own words!""",
             templates = self.greeting_templates["new_user"]
 
         template = random.choice(templates)
-        return template.format(name=name_part)
+        greeting = template.format(name=name_part)
+        
+        # Add context if frequent user
+        if user_profile and user_profile.interaction_count > 10:
+            if user_profile.top_categories:
+                greeting += f" I've learned you love {user_profile.top_categories[0]}!"
+        
+        return greeting
 
     def _handle_general(self, entities: Dict) -> str:
         """Handle general intent responses."""
@@ -1559,17 +1604,40 @@ Just tell me what you need in your own words!""",
                 return f"{brand} {category}:"
             return f"{category.title()}:"
 
-        # Standard openers
+        # Get base opener
         openers = self.intent_openers.get(intent, ["Here's what I found:"])
         opener = random.choice(openers)
 
-        # Add brand/category context for search intent
+        # Enhance for search intent with context
         if intent == "search":
             category = entities.get("category", "products").lower()
             brand = entities.get("brand")
+            price = entities.get("price", {})
+            
+            # Build context string
+            context_parts = []
             if brand:
-                return f"Here are the {brand} {category} I found:"
-            return f"I found some great {category} options:"
+                context_parts.append(f"{brand} {category}")
+            else:
+                context_parts.append(category)
+            
+            if price.get("max"):
+                context_parts.append(f"under Rs {price['max']:,.0f}")
+            
+            if context_parts:
+                return f"Perfect! Here are the best {' '.join(context_parts)}:"
+            
+        # Enhance for compare intent
+        elif intent == "compare":
+            brands = [entities.get("brand")] if entities.get("brand") else []
+            if brands[0]:
+                return f"Let me show you how these options compare!"
+                
+        # Enhance for recommendation intent
+        elif intent == "recommendation":
+            if user_profile and user_profile.interaction_count > 5:
+                return f"Based on what you've shopped before, I think you'll love these:"
+            return opener
 
         return opener
 
@@ -1600,6 +1668,49 @@ Just tell me what you need in your own words!""",
 
         if filters:
             return f"Filters: {', '.join(filters)}."
+        return ""
+
+    def _generate_result_summary(self, entities: Dict, num_results: int) -> str:
+        """Generate a smart summary of results found."""
+        if num_results < 1:
+            return ""
+        if num_results == 1:
+            return "Found 1 great option."
+        if num_results < 3:
+            return f"Found {num_results} great options."
+        
+        category = entities.get("category", "").lower()
+        brand = entities.get("brand")
+        price = entities.get("price", {})
+        
+        summary_parts = []
+        
+        # Build result count statement
+        showing = min(num_results, 10)
+        if showing < num_results:
+            summary_parts.append(f"Found {num_results} matches, showing top {showing}:")
+        else:
+            summary_parts.append(f"Found {num_results} perfect matches:")
+        
+        return " ".join(summary_parts)
+
+    def _generate_helpful_tips(self, intent: str, entities: Dict, num_results: int) -> str:
+        """Generate context-aware tips for the user."""
+        tips = []
+        
+        if intent == "search" and num_results > 3:
+            tips.append("Want to see cheaper options or try a different brand?")
+        elif intent == "recommendation" and num_results > 2:
+            tips.append("These are my AI-powered picks based on your preferences!")
+        elif intent == "filter" and num_results > 5:
+            tips.append("You can further filter by rating or availability.")
+        elif intent == "compare":
+            tips.append("Click on any product to see full specifications and customer reviews.")
+        elif intent == "buy" and num_results > 2:
+            tips.append("Compare the options or ask for specific recommendations!")
+        
+        if tips:
+            return " ".join(random.sample(tips, 1))
         return ""
 
 

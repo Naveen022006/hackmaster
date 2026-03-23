@@ -28,6 +28,11 @@ from services.recommendation_pipeline import get_pipeline, RecommendationPipelin
 from api.auth_routes import router as auth_router
 from api.admin_routes import router as admin_router
 
+# Import new requirement routers (R6, R7, R8)
+from api.feedback_routes import router as feedback_router
+from api.catalog_routes import router as catalog_router
+from api.storage_routes import router as storage_router
+
 
 # Global pipeline instance
 pipeline: Optional[RecommendationPipeline] = None
@@ -96,6 +101,9 @@ app.add_middleware(
 # Include routers
 app.include_router(auth_router)
 app.include_router(admin_router)
+app.include_router(feedback_router)  # R7: Feedback Collection System
+app.include_router(catalog_router)   # R6: External Catalog Integration
+app.include_router(storage_router)   # R8: Cloud Storage Infrastructure
 
 
 def get_pipeline_instance() -> RecommendationPipeline:

@@ -78,21 +78,35 @@
     "user_id": "U00001",
     "display_name": null,
     "created_at": "2026-03-23T12:27:50.890321",
-    "last_updated": "2026-03-23T12:29:06.830349",
-    "interaction_count": 5,
+    "last_updated": "2026-03-23T16:38:17.190790",
+    "interaction_count": 30,
     "total_sessions": 0,
     "last_session_date": null,
     "common_intents": {
-      "greeting": 1,
+      "greeting": 2,
       "buy": 1,
-      "search": 2,
-      "general": 1
+      "search": 10,
+      "general": 3,
+      "compare": 4,
+      "filter": 4,
+      "refine": 3,
+      "inquiry": 3
     },
     "common_categories": {
-      "Electronics": 8.0
+      "Electronics": 48.0,
+      "Clothing": 8.0
     },
-    "common_brands": {},
-    "common_features": {},
+    "common_brands": {
+      "Nike": 16.0,
+      "Dell": 6.0,
+      "Samsung": 18.0
+    },
+    "common_features": {
+      "special": 3.0,
+      "storage": 3.0,
+      "camera": 3.0,
+      "design": 3.0
+    },
     "verbosity_preference": "normal",
     "prefers_detailed_specs": false,
     "prefers_alternatives": true,
