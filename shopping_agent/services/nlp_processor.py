@@ -1474,56 +1474,40 @@ I'm powered by AI that learns your preferences. The more you shop, the better my
         # Build contextual response for product queries
         response_parts = []
 
-        # 1. For refinements, use acknowledgment if context indicates it
+        # 1. For refinements, use acknowledgment only (don't repeat opener)
         if context and context.is_refinement:
             ack = self._acknowledge_refinement(entities, context)
-            response_parts.append(ack)
-            # Add opener after acknowledgment
-            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
-            if opener and "here" not in opener.lower():
-                response_parts.append(opener)
-        elif context and context.references_previous:
-            response_parts.append(random.choice(self.context_connectors) + ".")
-            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
-            response_parts.append(opener)
-        else:
-            # Add opening based on intent
-            opener = self._get_intent_opener(intent, entities, num_results, user_profile)
+            if ack:
+                response_parts.append(ack)
+        
+        # 2. Add main opener only once
+        opener = self._get_intent_opener(intent, entities, num_results, context, user_profile)
+        if opener:
             response_parts.append(opener)
 
-        # 2. Add smart summary of what we found
+        # 3. Add smart summary of what we found (ONLY for specific intents)
         summary = self._generate_result_summary(entities, num_results)
-        if summary and intent in ["search", "recommendation", "filter", "refine"]:
+        if summary and intent in ["search", "recommendation", "filter"]:
             response_parts.append(summary)
 
-        # 3. Mention key filters naturally (if verbose mode)
-        if user_profile and user_profile.verbosity_preference != "brief":
-            filter_mention = self._describe_filters(entities)
-            if filter_mention:
-                response_parts.append(filter_mention)
-
-        # 4. Add helpful suggestions based on results and intent
+        # 4. Add helpful tips (INSTEAD of redundant filter descriptions)
         tips = self._generate_helpful_tips(intent, entities, num_results)
         if tips:
             response_parts.append(tips)
 
-        # 5. Add encouragement for engagement
+        # 5. Add encouragement for new users
         if user_profile and user_profile.interaction_count < 3 and num_results >= 3:
-            response_parts.append("💡 Pro tip: Click products to compare or ask me to find alternatives!")
+            response_parts.append("Tip: Click any product to see details or ask for more options!")
 
-        # Join response parts with better punctuation
-        if len(response_parts) <= 2:
-            return " ".join(response_parts)
-        else:
-            # Join first parts with periods/semicolons, last part as is
-            main_parts = response_parts[:-1]
-            last_part = response_parts[-1]
-            main_response = " ".join(main_parts)
-            if not main_response.endswith((".", "!", "?")):
-                main_response += "."
-            return main_response + " " + last_part
-
-        return " ".join(response_parts)
+        # Join response parts cleanly (avoid truncation)
+        response = " ".join(response_parts)
+        
+        # Clean up multiple spaces and ensure proper formatting
+        response = " ".join(response.split())  # Remove extra spaces
+        if response and not response.endswith((".", "!", "?")):
+            response += "."
+        
+        return response
 
     def _generate_greeting(self, user_profile: "UserConversationProfile" = None) -> str:
         """Generate personalized greeting based on user history."""
@@ -1567,31 +1551,18 @@ I'm powered by AI that learns your preferences. The more you shop, the better my
     def _acknowledge_refinement(self, entities: Dict, context: "ConversationContext") -> str:
         """Acknowledge when user refines their search."""
         ack = random.choice(self.refinement_acks)
-        changes = []
+        
+        # Don't try to describe changes - just acknowledge
+        # Changes will be shown in the results, not in the ack
+        return f"{ack}!"
 
-        # Describe what changed
-        if entities.get("price"):
-            price = entities["price"]
-            if price.get("max"):
-                changes.append(f"under Rs {price['max']:,.0f}")
-            if price.get("min"):
-                changes.append(f"above Rs {price['min']:,.0f}")
-
-        if entities.get("brand") and entities["brand"] != context.last_brand:
-            changes.append(f"{entities['brand']} products")
-
-        if entities.get("features"):
-            changes.append(f"with {entities['features'][0]}")
-
-        if changes:
-            return f"{ack}, filtering to {' and '.join(changes)}."
-        return f"{ack}."
 
     def _get_intent_opener(
         self,
         intent: str,
         entities: Dict,
         num_results: int,
+        context: "ConversationContext" = None,
         user_profile: "UserConversationProfile" = None
     ) -> str:
         """Get appropriate opener based on intent and context."""
@@ -1604,70 +1575,20 @@ I'm powered by AI that learns your preferences. The more you shop, the better my
                 return f"{brand} {category}:"
             return f"{category.title()}:"
 
-        # Get base opener
+        # For refinements - show what we're doing
+        if context and context.is_refinement:
+            return f"Here are the updated results for you:"
+
+        # Get base opener for intent
         openers = self.intent_openers.get(intent, ["Here's what I found:"])
         opener = random.choice(openers)
-
-        # Enhance for search intent with context
-        if intent == "search":
-            category = entities.get("category", "products").lower()
-            brand = entities.get("brand")
-            price = entities.get("price", {})
-            
-            # Build context string
-            context_parts = []
-            if brand:
-                context_parts.append(f"{brand} {category}")
-            else:
-                context_parts.append(category)
-            
-            if price.get("max"):
-                context_parts.append(f"under Rs {price['max']:,.0f}")
-            
-            if context_parts:
-                return f"Perfect! Here are the best {' '.join(context_parts)}:"
-            
-        # Enhance for compare intent
-        elif intent == "compare":
-            brands = [entities.get("brand")] if entities.get("brand") else []
-            if brands[0]:
-                return f"Let me show you how these options compare!"
-                
-        # Enhance for recommendation intent
-        elif intent == "recommendation":
-            if user_profile and user_profile.interaction_count > 5:
-                return f"Based on what you've shopped before, I think you'll love these:"
-            return opener
-
+        
         return opener
 
     def _describe_filters(self, entities: Dict) -> str:
-        """Describe applied filters naturally."""
-        filters = []
-
-        price = entities.get("price", {})
-        if price.get("max") and price.get("min"):
-            filters.append(f"Rs {price['min']:,.0f}-{price['max']:,.0f}")
-        elif price.get("max"):
-            filters.append(f"under Rs {price['max']:,.0f}")
-        elif price.get("min"):
-            filters.append(f"above Rs {price['min']:,.0f}")
-
-        if entities.get("brand"):
-            filters.append(entities["brand"])
-
-        features = entities.get("features", [])
-        if features:
-            filters.append(f"with {features[0]}")
-
-        if entities.get("gender"):
-            filters.append(f"for {entities['gender']}")
-
-        if entities.get("discount"):
-            filters.append("on sale")
-
-        if filters:
-            return f"Filters: {', '.join(filters)}."
+        """Build natural filter descriptions (optional, not used with new summary)."""
+        # This method is kept for backward compatibility but not used in main flow
+        # Filters are now integrated into summary and tips
         return ""
 
     def _generate_result_summary(self, entities: Dict, num_results: int) -> str:
@@ -1696,21 +1617,39 @@ I'm powered by AI that learns your preferences. The more you shop, the better my
 
     def _generate_helpful_tips(self, intent: str, entities: Dict, num_results: int) -> str:
         """Generate context-aware tips for the user."""
-        tips = []
+        if num_results < 3:
+            return ""
         
-        if intent == "search" and num_results > 3:
-            tips.append("Want to see cheaper options or try a different brand?")
-        elif intent == "recommendation" and num_results > 2:
-            tips.append("These are my AI-powered picks based on your preferences!")
-        elif intent == "filter" and num_results > 5:
-            tips.append("You can further filter by rating or availability.")
-        elif intent == "compare":
-            tips.append("Click on any product to see full specifications and customer reviews.")
-        elif intent == "buy" and num_results > 2:
-            tips.append("Compare the options or ask for specific recommendations!")
+        tips_by_intent = {
+            "search": [
+                "Try adding filters like price range or brand to narrow down.",
+                "Interested in a specific brand or price range?",
+            ],
+            "recommendation": [
+                "Based on your shopping history, these should be perfect for you!",
+                "Check out these personalized picks just for you!",
+            ],
+            "filter": [
+                "Want to see more options or apply additional filters?",
+                "These match your criteria perfectly!",
+            ],
+            "compare": [
+                "Tap any product for detailed specs and customer reviews.",
+                "Check out the comparisons to find your best match!",
+            ],
+            "buy": [
+                "Ready to add one to your cart?",
+                "Which one looks best to you?",
+            ],
+            "refine": [
+                "Let me know if you'd like to adjust further!",
+                "Looking for something more specific?",
+            ]
+        }
         
+        tips = tips_by_intent.get(intent, [])
         if tips:
-            return " ".join(random.sample(tips, 1))
+            return random.choice(tips)
         return ""
 
 
