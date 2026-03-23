@@ -73,5 +73,31 @@
     "prefers_price_comparison": true,
     "purchase_categories": [],
     "avg_purchase_price": 0.0
+  },
+  "U00001": {
+    "user_id": "U00001",
+    "display_name": null,
+    "created_at": "2026-03-23T12:27:50.890321",
+    "last_updated": "2026-03-23T12:29:06.830349",
+    "interaction_count": 5,
+    "total_sessions": 0,
+    "last_session_date": null,
+    "common_intents": {
+      "greeting": 1,
+      "buy": 1,
+      "search": 2,
+      "general": 1
+    },
+    "common_categories": {
+      "Electronics": 8.0
+    },
+    "common_brands": {},
+    "common_features": {},
+    "verbosity_preference": "normal",
+    "prefers_detailed_specs": false,
+    "prefers_alternatives": true,
+    "prefers_price_comparison": true,
+    "purchase_categories": [],
+    "avg_purchase_price": 0.0
   }
 }
