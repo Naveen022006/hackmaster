@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shopping Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span>ShopAI</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active" data-section="chat">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat Assistant</span>
+                </a>
+                <a href="#" class="nav-item" data-section="recommendations">
+                    <i class="fas fa-star"></i>
+                    <span>For You</span>
+                </a>
+                <a href="#" class="nav-item" data-section="deals">
+                    <i class="fas fa-tags"></i>
+                    <span>Deals</span>
+                </a>
+                <a href="#" class="nav-item" data-section="categories">
+                    <i class="fas fa-th-large"></i>
+                    <span>Categories</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="cart-preview" id="cart-preview">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>Cart</span>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+                <div class="user-stats" id="user-stats">
+                    <small>Session Active</small>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="main-header">
+                <div class="search-bar">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="search-input" placeholder="Search products...">
+                    <button id="search-btn">Search</button>
+                </div>
+                <div class="header-actions">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="user-id-display">Guest User</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Sections -->
+            <div class="content-wrapper">
+                <!-- Chat Section -->
+                <section id="chat-section" class="content-section active">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h2><i class="fas fa-robot"></i> AI Shopping Assistant</h2>
+                            <p>I can help you find products, get recommendations, and more!</p>
+                        </div>
+
+                        <div class="chat-messages" id="chat-messages">
+                            <div class="message bot-message">
+                                <div class="message-avatar">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="message-content">
+                                    <p>Hello! I'm your AI shopping assistant. I can help you:</p>
+                                    <ul>
+                                        <li>Find products by category or price</li>
+                                        <li>Get personalized recommendations</li>
+                                        <li>Show you today's best deals</li>
+                                        <li>Manage your shopping cart</li>
+                                    </ul>
+                                    <p>What are you looking for today?</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="chat-input-container">
+                            <div class="quick-actions">
+                                <button class="quick-action" data-message="recommend something">
+                                    <i class="fas fa-star"></i> Recommendations
+                                </button>
+                                <button class="quick-action" data-message="show me deals">
+                                    <i class="fas fa-tags"></i> Deals
+                                </button>
+                                <button class="quick-action" data-message="show my cart">
+                                    <i class="fas fa-shopping-cart"></i> My Cart
+                                </button>
+                                <button class="quick-action" data-message="help">
+                                    <i class="fas fa-question-circle"></i> Help
+                                </button>
+                            </div>
+                            <div class="chat-input">
+                                <input type="text" id="chat-input" placeholder="Type your message...">
+                                <button id="send-btn">
+                                    <i class="fas fa-paper-plane"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recommendations Section -->
+                <section id="recommendations-section" class="content-section">
+                    <h2><i class="fas fa-star"></i> Recommended For You</h2>
+                    <p class="section-subtitle">Personalized picks based on your preferences</p>
+                    <div class="products-grid" id="recommendations-grid">
+                        <!-- Products loaded dynamically -->
+                    </div>
+                </section>
+
+                <!-- Deals Section -->
+                <section id="deals-section" class="content-section">
+                    <h2><i class="fas fa-tags"></i> Today's Best Deals</h2>
+                    <p class="section-subtitle">Save big on these items!</p>
+                    <div class="products-grid" id="deals-grid">
+                        <!-- Deals loaded dynamically -->
+                    </div>
+                </section>
+
+                <!-- Categories Section -->
+                <section id="categories-section" class="content-section">
+                    <h2><i class="fas fa-th-large"></i> Browse Categories</h2>
+                    <p class="section-subtitle">Explore our product catalog</p>
+                    <div class="categories-grid" id="categories-grid">
+                        <!-- Categories loaded dynamically -->
+                    </div>
+                    <div class="products-grid" id="category-products-grid" style="display: none;">
+                        <!-- Category products loaded dynamically -->
+                    </div>
+                </section>
+
+                <!-- Search Results Section -->
+                <section id="search-section" class="content-section">
+                    <h2><i class="fas fa-search"></i> Search Results</h2>
+                    <p class="section-subtitle" id="search-query-display"></p>
+                    <div class="products-grid" id="search-results-grid">
+                        <!-- Search results loaded dynamically -->
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Cart Sidebar -->
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+                <button class="close-cart" id="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items loaded dynamically -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total">$0.00</span>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </aside>
+
+        <!-- Product Modal -->
+        <div class="modal" id="product-modal">
+            <div class="modal-content">
+                <button class="modal-close" id="modal-close">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="modal-body" id="modal-body">
+                    <!-- Product details loaded dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

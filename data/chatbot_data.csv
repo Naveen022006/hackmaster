@@ -1,0 +1,759 @@
+text,intent,entities
+hi,greeting,
+hello,greeting,
+hey,greeting,
+good morning,greeting,
+good afternoon,greeting,
+good evening,greeting,
+hi there,greeting,
+hello there,greeting,
+hey there,greeting,
+greetings,greeting,
+howdy,greeting,
+what's up,greeting,
+sup,greeting,
+yo,greeting,
+hiya,greeting,
+hello bot,greeting,
+hi bot,greeting,
+good day,greeting,
+hey bot,greeting,
+hello shopping assistant,greeting,
+namaste,greeting,
+bye,goodbye,
+goodbye,goodbye,
+see you later,goodbye,
+see ya,goodbye,
+take care,goodbye,
+bye bye,goodbye,
+good night,goodbye,
+have a nice day,goodbye,
+until next time,goodbye,
+catch you later,goodbye,
+farewell,goodbye,
+see you soon,goodbye,
+bye for now,goodbye,
+gotta go,goodbye,
+talk to you later,goodbye,
+peace out,goodbye,
+later,goodbye,
+show me camera,search_product,category:camera
+show me electronics,search_product,category:electronics
+show me makeup,search_product,category:makeup
+show me dolls,search_product,category:dolls
+show me grocery,search_product,category:grocery
+show me shirts,search_product,category:shirts
+show me games,search_product,category:games
+show me appliances,search_product,category:appliances
+show me snacks,search_product,category:snacks
+show me lego,search_product,category:lego
+i want to buy sneakers,search_product,category:sneakers
+i want to buy lego,search_product,category:lego
+i want to buy novels,search_product,category:novels
+i want to buy clothing,search_product,category:clothing
+i want to buy shoes,search_product,category:shoes
+i want to buy games,search_product,category:games
+i want to buy snacks,search_product,category:snacks
+i want to buy dress,search_product,category:dress
+i want to buy food,search_product,category:food
+i want to buy running,search_product,category:running
+looking for games,search_product,category:games
+looking for laptops,search_product,category:laptops
+looking for sneakers,search_product,category:sneakers
+looking for sports,search_product,category:sports
+looking for lego,search_product,category:lego
+looking for smartphones,search_product,category:smartphones
+looking for snacks,search_product,category:snacks
+looking for toys,search_product,category:toys
+looking for grocery,search_product,category:grocery
+looking for beverages,search_product,category:beverages
+find me beauty,search_product,category:beauty
+find me fitness,search_product,category:fitness
+find me sports,search_product,category:sports
+find me dress,search_product,category:dress
+find me books,search_product,category:books
+find me clothing,search_product,category:clothing
+find me toys,search_product,category:toys
+find me makeup,search_product,category:makeup
+find me lego,search_product,category:lego
+find me home & kitchen,search_product,category:home & kitchen
+search for food,search_product,category:food
+search for grocery,search_product,category:grocery
+search for books,search_product,category:books
+search for jeans,search_product,category:jeans
+search for textbooks,search_product,category:textbooks
+search for novels,search_product,category:novels
+search for fitness,search_product,category:fitness
+search for furniture,search_product,category:furniture
+search for perfume,search_product,category:perfume
+search for snacks,search_product,category:snacks
+i need dress,search_product,category:dress
+i need grocery,search_product,category:grocery
+i need fiction,search_product,category:fiction
+i need sneakers,search_product,category:sneakers
+i need camera,search_product,category:camera
+i need smartphones,search_product,category:smartphones
+i need fitness,search_product,category:fitness
+i need perfume,search_product,category:perfume
+i need shirts,search_product,category:shirts
+i need tv,search_product,category:tv
+can you show me sneakers,search_product,category:sneakers
+can you show me snacks,search_product,category:snacks
+can you show me food,search_product,category:food
+can you show me fitness,search_product,category:fitness
+can you show me toys,search_product,category:toys
+can you show me electronics,search_product,category:electronics
+can you show me games,search_product,category:games
+can you show me beauty,search_product,category:beauty
+can you show me fiction,search_product,category:fiction
+can you show me grocery,search_product,category:grocery
+do you have grocery,search_product,category:grocery
+do you have toys,search_product,category:toys
+do you have jeans,search_product,category:jeans
+do you have headphones,search_product,category:headphones
+do you have dress,search_product,category:dress
+do you have sports,search_product,category:sports
+do you have food,search_product,category:food
+do you have sneakers,search_product,category:sneakers
+do you have games,search_product,category:games
+do you have smartphones,search_product,category:smartphones
+i'm looking for camera,search_product,category:camera
+i'm looking for perfume,search_product,category:perfume
+i'm looking for makeup,search_product,category:makeup
+i'm looking for shoes,search_product,category:shoes
+i'm looking for beverages,search_product,category:beverages
+i'm looking for games,search_product,category:games
+i'm looking for tv,search_product,category:tv
+i'm looking for kitchen,search_product,category:kitchen
+i'm looking for clothing,search_product,category:clothing
+i'm looking for smartphones,search_product,category:smartphones
+show dolls,search_product,category:dolls
+show textbooks,search_product,category:textbooks
+show furniture,search_product,category:furniture
+show running,search_product,category:running
+show shoes,search_product,category:shoes
+show food,search_product,category:food
+show fitness,search_product,category:fitness
+show tv,search_product,category:tv
+show fiction,search_product,category:fiction
+show appliances,search_product,category:appliances
+find games,search_product,category:games
+find food,search_product,category:food
+find fiction,search_product,category:fiction
+find perfume,search_product,category:perfume
+find shoes,search_product,category:shoes
+find tv,search_product,category:tv
+find snacks,search_product,category:snacks
+find toys,search_product,category:toys
+find sneakers,search_product,category:sneakers
+find skincare,search_product,category:skincare
+get me perfume,search_product,category:perfume
+get me beverages,search_product,category:beverages
+get me appliances,search_product,category:appliances
+get me camera,search_product,category:camera
+get me novels,search_product,category:novels
+get me sneakers,search_product,category:sneakers
+get me furniture,search_product,category:furniture
+get me grocery,search_product,category:grocery
+get me dolls,search_product,category:dolls
+get me smartphones,search_product,category:smartphones
+i want appliances,search_product,category:appliances
+i want books,search_product,category:books
+i want fiction,search_product,category:fiction
+i want gym,search_product,category:gym
+i want shirts,search_product,category:shirts
+i want perfume,search_product,category:perfume
+i want games,search_product,category:games
+i want shoes,search_product,category:shoes
+i want jeans,search_product,category:jeans
+i want camera,search_product,category:camera
+search jeans,search_product,category:jeans
+search skincare,search_product,category:skincare
+search smartphones,search_product,category:smartphones
+search toys,search_product,category:toys
+search beauty,search_product,category:beauty
+search laptops,search_product,category:laptops
+search novels,search_product,category:novels
+search shoes,search_product,category:shoes
+search lego,search_product,category:lego
+search running,search_product,category:running
+browse fitness,search_product,category:fitness
+browse snacks,search_product,category:snacks
+browse grocery,search_product,category:grocery
+browse electronics,search_product,category:electronics
+browse fiction,search_product,category:fiction
+browse lego,search_product,category:lego
+browse food,search_product,category:food
+browse laptops,search_product,category:laptops
+browse shoes,search_product,category:shoes
+browse perfume,search_product,category:perfume
+look for running,search_product,category:running
+look for skincare,search_product,category:skincare
+look for textbooks,search_product,category:textbooks
+look for beauty,search_product,category:beauty
+look for food,search_product,category:food
+look for dolls,search_product,category:dolls
+look for home & kitchen,search_product,category:home & kitchen
+look for books,search_product,category:books
+look for yoga,search_product,category:yoga
+look for sports,search_product,category:sports
+need sneakers,search_product,category:sneakers
+need textbooks,search_product,category:textbooks
+need beverages,search_product,category:beverages
+need running,search_product,category:running
+need furniture,search_product,category:furniture
+need sports,search_product,category:sports
+need fiction,search_product,category:fiction
+need games,search_product,category:games
+need dolls,search_product,category:dolls
+need smartphones,search_product,category:smartphones
+want to see snacks,search_product,category:snacks
+want to see smartphones,search_product,category:smartphones
+want to see shirts,search_product,category:shirts
+want to see dress,search_product,category:dress
+want to see fiction,search_product,category:fiction
+want to see jeans,search_product,category:jeans
+want to see electronics,search_product,category:electronics
+want to see lego,search_product,category:lego
+want to see beverages,search_product,category:beverages
+want to see tv,search_product,category:tv
+display fiction,search_product,category:fiction
+display furniture,search_product,category:furniture
+display kitchen,search_product,category:kitchen
+display headphones,search_product,category:headphones
+display books,search_product,category:books
+display beverages,search_product,category:beverages
+display home & kitchen,search_product,category:home & kitchen
+display shirts,search_product,category:shirts
+display shoes,search_product,category:shoes
+display makeup,search_product,category:makeup
+show me some snacks,search_product,category:snacks
+show me some headphones,search_product,category:headphones
+show me some yoga,search_product,category:yoga
+show me some games,search_product,category:games
+show me some perfume,search_product,category:perfume
+show me some home & kitchen,search_product,category:home & kitchen
+show me some fitness,search_product,category:fitness
+show me some beverages,search_product,category:beverages
+show me some kitchen,search_product,category:kitchen
+show me some shirts,search_product,category:shirts
+show me products under 300,price_query,price:300
+show me products under 200,price_query,price:200
+show me products under 1000,price_query,price:1000
+show me products under 50,price_query,price:50
+show me products under 5000,price_query,price:5000
+show me products under 2000,price_query,price:2000
+items below 2000,price_query,price:2000
+items below 100,price_query,price:100
+items below 1000,price_query,price:1000
+items below 200,price_query,price:200
+items below 500,price_query,price:500
+items below 5000,price_query,price:5000
+products under 100 rupees,price_query,price:100
+products under 1500 rupees,price_query,price:1500
+products under 10000 rupees,price_query,price:10000
+products under 1000 rupees,price_query,price:1000
+products under 500 rupees,price_query,price:500
+products under 300 rupees,price_query,price:300
+cheap yoga under 1000,price_query,category:yoga|price:1000
+cheap yoga under 1500,price_query,category:yoga|price:1500
+cheap yoga under 300,price_query,category:yoga|price:300
+cheap yoga under 200,price_query,category:yoga|price:200
+cheap fiction under 100,price_query,category:fiction|price:100
+cheap fiction under 50,price_query,category:fiction|price:50
+cheap fiction under 300,price_query,category:fiction|price:300
+cheap fiction under 10000,price_query,category:fiction|price:10000
+cheap beauty under 50,price_query,category:beauty|price:50
+cheap beauty under 100,price_query,category:beauty|price:100
+cheap beauty under 1500,price_query,category:beauty|price:1500
+cheap beauty under 1000,price_query,category:beauty|price:1000
+cheap dress under 100,price_query,category:dress|price:100
+cheap dress under 50,price_query,category:dress|price:50
+cheap dress under 5000,price_query,category:dress|price:5000
+cheap dress under 2000,price_query,category:dress|price:2000
+cheap electronics under 1000,price_query,category:electronics|price:1000
+cheap electronics under 200,price_query,category:electronics|price:200
+cheap electronics under 50,price_query,category:electronics|price:50
+cheap electronics under 2000,price_query,category:electronics|price:2000
+cheap sneakers under 2000,price_query,category:sneakers|price:2000
+cheap sneakers under 300,price_query,category:sneakers|price:300
+cheap sneakers under 100,price_query,category:sneakers|price:100
+cheap sneakers under 200,price_query,category:sneakers|price:200
+cheap perfume under 2000,price_query,category:perfume|price:2000
+cheap perfume under 1500,price_query,category:perfume|price:1500
+cheap perfume under 500,price_query,category:perfume|price:500
+cheap perfume under 200,price_query,category:perfume|price:200
+cheap kitchen under 200,price_query,category:kitchen|price:200
+cheap kitchen under 10000,price_query,category:kitchen|price:10000
+cheap kitchen under 1500,price_query,category:kitchen|price:1500
+cheap kitchen under 5000,price_query,category:kitchen|price:5000
+affordable items under 100,price_query,price:100
+affordable items under 200,price_query,price:200
+affordable items under 300,price_query,price:300
+affordable items under 2000,price_query,price:2000
+affordable items under 50,price_query,price:50
+affordable items under 10000,price_query,price:10000
+budget friendly under 10000,price_query,price:10000
+budget friendly under 300,price_query,price:300
+budget friendly under 2000,price_query,price:2000
+budget friendly under 100,price_query,price:100
+budget friendly under 500,price_query,price:500
+budget friendly under 50,price_query,price:50
+what can i get for 1000,price_query,price:1000
+what can i get for 200,price_query,price:200
+what can i get for 10000,price_query,price:10000
+what can i get for 1500,price_query,price:1500
+what can i get for 500,price_query,price:500
+what can i get for 5000,price_query,price:5000
+products less than 50,price_query,price:50
+products less than 5000,price_query,price:5000
+products less than 2000,price_query,price:2000
+products less than 300,price_query,price:300
+products less than 1500,price_query,price:1500
+products less than 10000,price_query,price:10000
+show me skincare under 5000,price_query,category:skincare|price:5000
+show me skincare under 100,price_query,category:skincare|price:100
+show me skincare under 10000,price_query,category:skincare|price:10000
+show me skincare under 1000,price_query,category:skincare|price:1000
+show me toys under 500,price_query,category:toys|price:500
+show me toys under 50,price_query,category:toys|price:50
+show me toys under 1000,price_query,category:toys|price:1000
+show me toys under 200,price_query,category:toys|price:200
+show me snacks under 10000,price_query,category:snacks|price:10000
+show me snacks under 300,price_query,category:snacks|price:300
+show me snacks under 100,price_query,category:snacks|price:100
+show me snacks under 50,price_query,category:snacks|price:50
+show me shirts under 300,price_query,category:shirts|price:300
+show me shirts under 500,price_query,category:shirts|price:500
+show me shirts under 200,price_query,category:shirts|price:200
+show me shirts under 50,price_query,category:shirts|price:50
+show me gym under 300,price_query,category:gym|price:300
+show me gym under 50,price_query,category:gym|price:50
+show me gym under 200,price_query,category:gym|price:200
+show me gym under 2000,price_query,category:gym|price:2000
+show me furniture under 1000,price_query,category:furniture|price:1000
+show me furniture under 300,price_query,category:furniture|price:300
+show me furniture under 200,price_query,category:furniture|price:200
+show me furniture under 50,price_query,category:furniture|price:50
+show me smartphones under 2000,price_query,category:smartphones|price:2000
+show me smartphones under 50,price_query,category:smartphones|price:50
+show me smartphones under 100,price_query,category:smartphones|price:100
+show me smartphones under 1000,price_query,category:smartphones|price:1000
+show me food under 500,price_query,category:food|price:500
+show me food under 1500,price_query,category:food|price:1500
+show me food under 100,price_query,category:food|price:100
+show me food under 10000,price_query,category:food|price:10000
+find headphones below 300,price_query,category:headphones|price:300
+find headphones below 100,price_query,category:headphones|price:100
+find headphones below 1500,price_query,category:headphones|price:1500
+find headphones below 200,price_query,category:headphones|price:200
+find gym below 1500,price_query,category:gym|price:1500
+find gym below 50,price_query,category:gym|price:50
+find gym below 2000,price_query,category:gym|price:2000
+find gym below 100,price_query,category:gym|price:100
+find shirts below 300,price_query,category:shirts|price:300
+find shirts below 100,price_query,category:shirts|price:100
+find shirts below 1500,price_query,category:shirts|price:1500
+find shirts below 5000,price_query,category:shirts|price:5000
+find snacks below 300,price_query,category:snacks|price:300
+find snacks below 50,price_query,category:snacks|price:50
+find snacks below 2000,price_query,category:snacks|price:2000
+find snacks below 500,price_query,category:snacks|price:500
+find shoes below 500,price_query,category:shoes|price:500
+find shoes below 50,price_query,category:shoes|price:50
+find shoes below 300,price_query,category:shoes|price:300
+find shoes below 200,price_query,category:shoes|price:200
+find furniture below 10000,price_query,category:furniture|price:10000
+find furniture below 2000,price_query,category:furniture|price:2000
+find furniture below 200,price_query,category:furniture|price:200
+find furniture below 500,price_query,category:furniture|price:500
+find grocery below 10000,price_query,category:grocery|price:10000
+find grocery below 100,price_query,category:grocery|price:100
+find grocery below 500,price_query,category:grocery|price:500
+find grocery below 300,price_query,category:grocery|price:300
+find tv below 2000,price_query,category:tv|price:2000
+find tv below 300,price_query,category:tv|price:300
+find tv below 100,price_query,category:tv|price:100
+find tv below 200,price_query,category:tv|price:200
+i have a budget of 50,price_query,price:50
+i have a budget of 500,price_query,price:500
+i have a budget of 10000,price_query,price:10000
+i have a budget of 5000,price_query,price:5000
+i have a budget of 200,price_query,price:200
+i have a budget of 2000,price_query,price:2000
+headphones within 300,price_query,category:headphones|price:300
+headphones within 1000,price_query,category:headphones|price:1000
+headphones within 2000,price_query,category:headphones|price:2000
+headphones within 1500,price_query,category:headphones|price:1500
+beauty within 300,price_query,category:beauty|price:300
+beauty within 1000,price_query,category:beauty|price:1000
+beauty within 1500,price_query,category:beauty|price:1500
+beauty within 500,price_query,category:beauty|price:500
+toys within 5000,price_query,category:toys|price:5000
+toys within 200,price_query,category:toys|price:200
+toys within 500,price_query,category:toys|price:500
+toys within 1000,price_query,category:toys|price:1000
+camera within 10000,price_query,category:camera|price:10000
+camera within 500,price_query,category:camera|price:500
+camera within 1500,price_query,category:camera|price:1500
+camera within 100,price_query,category:camera|price:100
+appliances within 10000,price_query,category:appliances|price:10000
+appliances within 1000,price_query,category:appliances|price:1000
+appliances within 1500,price_query,category:appliances|price:1500
+appliances within 300,price_query,category:appliances|price:300
+dress within 300,price_query,category:dress|price:300
+dress within 10000,price_query,category:dress|price:10000
+dress within 200,price_query,category:dress|price:200
+dress within 1500,price_query,category:dress|price:1500
+perfume within 500,price_query,category:perfume|price:500
+perfume within 1500,price_query,category:perfume|price:1500
+perfume within 50,price_query,category:perfume|price:50
+perfume within 10000,price_query,category:perfume|price:10000
+electronics within 1500,price_query,category:electronics|price:1500
+electronics within 100,price_query,category:electronics|price:100
+electronics within 1000,price_query,category:electronics|price:1000
+electronics within 300,price_query,category:electronics|price:300
+items costing less than 2000,price_query,price:2000
+items costing less than 300,price_query,price:300
+items costing less than 50,price_query,price:50
+items costing less than 5000,price_query,price:5000
+items costing less than 1500,price_query,price:1500
+items costing less than 100,price_query,price:100
+cheap products under 500,price_query,price:500
+cheap products under 300,price_query,price:300
+cheap products under 2000,price_query,price:2000
+cheap products under 5000,price_query,price:5000
+cheap products under 1000,price_query,price:1000
+cheap products under 50,price_query,price:50
+show budget games under 100,price_query,category:games|price:100
+show budget games under 5000,price_query,category:games|price:5000
+show budget games under 1000,price_query,category:games|price:1000
+show budget games under 200,price_query,category:games|price:200
+show budget furniture under 100,price_query,category:furniture|price:100
+show budget furniture under 300,price_query,category:furniture|price:300
+show budget furniture under 1000,price_query,category:furniture|price:1000
+show budget furniture under 2000,price_query,category:furniture|price:2000
+show budget laptops under 5000,price_query,category:laptops|price:5000
+show budget laptops under 50,price_query,category:laptops|price:50
+show budget laptops under 500,price_query,category:laptops|price:500
+show budget laptops under 1500,price_query,category:laptops|price:1500
+show budget beverages under 300,price_query,category:beverages|price:300
+show budget beverages under 500,price_query,category:beverages|price:500
+show budget beverages under 50,price_query,category:beverages|price:50
+show budget beverages under 200,price_query,category:beverages|price:200
+show budget clothing under 5000,price_query,category:clothing|price:5000
+show budget clothing under 1500,price_query,category:clothing|price:1500
+show budget clothing under 2000,price_query,category:clothing|price:2000
+show budget clothing under 500,price_query,category:clothing|price:500
+show budget food under 200,price_query,category:food|price:200
+show budget food under 2000,price_query,category:food|price:2000
+show budget food under 100,price_query,category:food|price:100
+show budget food under 5000,price_query,category:food|price:5000
+show budget kitchen under 100,price_query,category:kitchen|price:100
+show budget kitchen under 1500,price_query,category:kitchen|price:1500
+show budget kitchen under 300,price_query,category:kitchen|price:300
+show budget kitchen under 2000,price_query,category:kitchen|price:2000
+show budget fitness under 1000,price_query,category:fitness|price:1000
+show budget fitness under 500,price_query,category:fitness|price:500
+show budget fitness under 2000,price_query,category:fitness|price:2000
+show budget fitness under 5000,price_query,category:fitness|price:5000
+under 100,price_query,price:100
+under 5000,price_query,price:5000
+under 500,price_query,price:500
+under 1500,price_query,price:1500
+under 10000,price_query,price:10000
+under 1000,price_query,price:1000
+recommend something,recommendation,
+what do you suggest,recommendation,
+suggest something,recommendation,
+recommend products,recommendation,
+give me recommendations,recommendation,
+what should i buy,recommendation,
+suggest me something,recommendation,
+any recommendations,recommendation,
+best products for me,recommendation,
+personalized recommendations,recommendation,
+what's popular,recommendation,
+trending products,recommendation,
+top picks for me,recommendation,
+suggest based on my history,recommendation,
+recommended for me,recommendation,
+what do you recommend,recommendation,
+suggest something for me,recommendation,
+help me choose,recommendation,
+what's hot,recommendation,
+best sellers,recommendation,
+top rated,recommendation,
+recommend electronics,category_recommendation,category:electronics
+recommend yoga,category_recommendation,category:yoga
+recommend jeans,category_recommendation,category:jeans
+recommend shirts,category_recommendation,category:shirts
+recommend toys,category_recommendation,category:toys
+recommend dress,category_recommendation,category:dress
+recommend food,category_recommendation,category:food
+recommend skincare,category_recommendation,category:skincare
+recommend headphones,category_recommendation,category:headphones
+recommend shoes,category_recommendation,category:shoes
+suggest headphones,category_recommendation,category:headphones
+suggest home & kitchen,category_recommendation,category:home & kitchen
+suggest electronics,category_recommendation,category:electronics
+suggest clothing,category_recommendation,category:clothing
+suggest makeup,category_recommendation,category:makeup
+suggest kitchen,category_recommendation,category:kitchen
+suggest novels,category_recommendation,category:novels
+suggest beverages,category_recommendation,category:beverages
+suggest sports,category_recommendation,category:sports
+suggest perfume,category_recommendation,category:perfume
+best grocery,category_recommendation,category:grocery
+best furniture,category_recommendation,category:furniture
+best gym,category_recommendation,category:gym
+best shirts,category_recommendation,category:shirts
+best sports,category_recommendation,category:sports
+best skincare,category_recommendation,category:skincare
+best perfume,category_recommendation,category:perfume
+best games,category_recommendation,category:games
+best jeans,category_recommendation,category:jeans
+best smartphones,category_recommendation,category:smartphones
+top makeup,category_recommendation,category:makeup
+top shoes,category_recommendation,category:shoes
+top grocery,category_recommendation,category:grocery
+top kitchen,category_recommendation,category:kitchen
+top fitness,category_recommendation,category:fitness
+top laptops,category_recommendation,category:laptops
+top skincare,category_recommendation,category:skincare
+top furniture,category_recommendation,category:furniture
+top gym,category_recommendation,category:gym
+top clothing,category_recommendation,category:clothing
+popular perfume,category_recommendation,category:perfume
+popular smartphones,category_recommendation,category:smartphones
+popular clothing,category_recommendation,category:clothing
+popular beauty,category_recommendation,category:beauty
+popular headphones,category_recommendation,category:headphones
+popular skincare,category_recommendation,category:skincare
+popular sports,category_recommendation,category:sports
+popular gym,category_recommendation,category:gym
+popular dolls,category_recommendation,category:dolls
+popular tv,category_recommendation,category:tv
+recommend me dress,category_recommendation,category:dress
+recommend me jeans,category_recommendation,category:jeans
+recommend me dolls,category_recommendation,category:dolls
+recommend me kitchen,category_recommendation,category:kitchen
+recommend me sneakers,category_recommendation,category:sneakers
+recommend me toys,category_recommendation,category:toys
+recommend me textbooks,category_recommendation,category:textbooks
+recommend me furniture,category_recommendation,category:furniture
+recommend me grocery,category_recommendation,category:grocery
+recommend me shirts,category_recommendation,category:shirts
+suggest some jeans,category_recommendation,category:jeans
+suggest some tv,category_recommendation,category:tv
+suggest some skincare,category_recommendation,category:skincare
+suggest some camera,category_recommendation,category:camera
+suggest some beverages,category_recommendation,category:beverages
+suggest some textbooks,category_recommendation,category:textbooks
+suggest some furniture,category_recommendation,category:furniture
+suggest some yoga,category_recommendation,category:yoga
+suggest some running,category_recommendation,category:running
+suggest some shirts,category_recommendation,category:shirts
+good shirts,category_recommendation,category:shirts
+good dress,category_recommendation,category:dress
+good furniture,category_recommendation,category:furniture
+good yoga,category_recommendation,category:yoga
+good tv,category_recommendation,category:tv
+good perfume,category_recommendation,category:perfume
+good clothing,category_recommendation,category:clothing
+good fiction,category_recommendation,category:fiction
+good camera,category_recommendation,category:camera
+good games,category_recommendation,category:games
+nice shirts,category_recommendation,category:shirts
+nice fitness,category_recommendation,category:fitness
+nice smartphones,category_recommendation,category:smartphones
+nice tv,category_recommendation,category:tv
+nice novels,category_recommendation,category:novels
+nice dolls,category_recommendation,category:dolls
+nice food,category_recommendation,category:food
+nice perfume,category_recommendation,category:perfume
+nice sneakers,category_recommendation,category:sneakers
+nice games,category_recommendation,category:games
+quality sports,category_recommendation,category:sports
+quality games,category_recommendation,category:games
+quality perfume,category_recommendation,category:perfume
+quality makeup,category_recommendation,category:makeup
+quality skincare,category_recommendation,category:skincare
+quality beverages,category_recommendation,category:beverages
+quality novels,category_recommendation,category:novels
+quality fiction,category_recommendation,category:fiction
+quality yoga,category_recommendation,category:yoga
+quality kitchen,category_recommendation,category:kitchen
+best skincare for me,category_recommendation,category:skincare
+best furniture for me,category_recommendation,category:furniture
+best appliances for me,category_recommendation,category:appliances
+best gym for me,category_recommendation,category:gym
+best tv for me,category_recommendation,category:tv
+best snacks for me,category_recommendation,category:snacks
+best smartphones for me,category_recommendation,category:smartphones
+best laptops for me,category_recommendation,category:laptops
+best kitchen for me,category_recommendation,category:kitchen
+best dolls for me,category_recommendation,category:dolls
+top rated grocery,category_recommendation,category:grocery
+top rated fiction,category_recommendation,category:fiction
+top rated perfume,category_recommendation,category:perfume
+top rated appliances,category_recommendation,category:appliances
+top rated tv,category_recommendation,category:tv
+top rated lego,category_recommendation,category:lego
+top rated yoga,category_recommendation,category:yoga
+top rated kitchen,category_recommendation,category:kitchen
+top rated toys,category_recommendation,category:toys
+top rated books,category_recommendation,category:books
+highly rated textbooks,category_recommendation,category:textbooks
+highly rated shoes,category_recommendation,category:shoes
+highly rated sneakers,category_recommendation,category:sneakers
+highly rated beverages,category_recommendation,category:beverages
+highly rated skincare,category_recommendation,category:skincare
+highly rated grocery,category_recommendation,category:grocery
+highly rated beauty,category_recommendation,category:beauty
+highly rated perfume,category_recommendation,category:perfume
+highly rated home & kitchen,category_recommendation,category:home & kitchen
+highly rated fitness,category_recommendation,category:fitness
+premium furniture,category_recommendation,category:furniture
+premium sneakers,category_recommendation,category:sneakers
+premium food,category_recommendation,category:food
+premium laptops,category_recommendation,category:laptops
+premium textbooks,category_recommendation,category:textbooks
+premium sports,category_recommendation,category:sports
+premium yoga,category_recommendation,category:yoga
+premium shirts,category_recommendation,category:shirts
+premium appliances,category_recommendation,category:appliances
+premium home & kitchen,category_recommendation,category:home & kitchen
+affordable snacks,category_recommendation,category:snacks
+affordable novels,category_recommendation,category:novels
+affordable toys,category_recommendation,category:toys
+affordable shirts,category_recommendation,category:shirts
+affordable books,category_recommendation,category:books
+affordable beverages,category_recommendation,category:beverages
+affordable grocery,category_recommendation,category:grocery
+affordable games,category_recommendation,category:games
+affordable sneakers,category_recommendation,category:sneakers
+affordable camera,category_recommendation,category:camera
+add to cart,cart_add,
+add this to cart,cart_add,
+put in cart,cart_add,
+add to my cart,cart_add,
+i want to buy this,cart_add,
+add it,cart_add,
+add to basket,cart_add,
+add this,cart_add,
+put this in my cart,cart_add,
+save to cart,cart_add,
+add this product,cart_add,
+i'll take it,cart_add,
+add one,cart_add,
+buy this,cart_add,
+purchase this,cart_add,
+show my cart,cart_view,
+view cart,cart_view,
+what's in my cart,cart_view,
+my cart,cart_view,
+show cart,cart_view,
+open cart,cart_view,
+see my cart,cart_view,
+cart contents,cart_view,
+what do i have in cart,cart_view,
+display cart,cart_view,
+check cart,cart_view,
+shopping cart,cart_view,
+basket,cart_view,
+view my basket,cart_view,
+show basket,cart_view,
+where is my order,order_status,
+track my order,order_status,
+order status,order_status,
+when will my order arrive,order_status,
+delivery status,order_status,
+track order,order_status,
+shipping status,order_status,
+order tracking,order_status,
+my orders,order_status,
+order history,order_status,
+check order status,order_status,
+when is delivery,order_status,
+track my package,order_status,
+package status,order_status,
+shipment status,order_status,
+where is my package,order_status,
+help,help,
+help me,help,
+i need help,help,
+can you help,help,
+assist me,help,
+assistance,help,
+support,help,
+how does this work,help,
+what can you do,help,
+how to use,help,
+guide me,help,
+tutorial,help,
+how do i,help,
+instructions,help,
+what are your features,help,
+capabilities,help,
+what do you offer,help,
+how can you help,help,
+i like this,feedback,
+i don't like this,feedback,
+this is good,feedback,
+this is bad,feedback,
+great product,feedback,
+terrible product,feedback,
+love it,feedback,
+hate it,feedback,
+not interested,feedback,
+show me more like this,feedback,
+less of this,feedback,
+perfect,feedback,
+not what i wanted,feedback,
+exactly what i need,feedback,
+thumbs up,feedback,
+thumbs down,feedback,
+rate this,feedback,
+give feedback,feedback,
+compare products,compare,
+compare these,compare,
+which is better,compare,
+difference between,compare,
+compare dolls,compare,category:dolls
+compare electronics,compare,category:electronics
+compare laptops,compare,category:laptops
+compare beauty,compare,category:beauty
+compare tv,compare,category:tv
+compare snacks,compare,category:snacks
+compare novels,compare,category:novels
+compare yoga,compare,category:yoga
+compare gym,compare,category:gym
+compare fitness,compare,category:fitness
+vs,compare,
+which one should i buy,compare,
+help me decide,compare,
+comparison,compare,
+what's the difference,compare,
+better option,compare,
+pros and cons,compare,
+which is cheaper,compare,
+which has better reviews,compare,
+show me deals,deals,
+any discounts,deals,
+sales,deals,
+offers,deals,
+special offers,deals,
+discounted products,deals,
+deals of the day,deals,
+best deals,deals,
+on sale,deals,
+clearance,deals,
+promotions,deals,
+coupon,deals,
+promo code,deals,
+discount code,deals,
+cheap deals,deals,
+bargains,deals,
+flash sale,deals,
+today's deals,deals,

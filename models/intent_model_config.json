@@ -1,0 +1,1 @@
+{"vocab_size": 249, "embedding_dim": 128, "lstm_units": 64, "max_sequence_length": 20, "num_intents": 13}

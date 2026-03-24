@@ -1,0 +1,501 @@
+user_id,name,email,age_group,gender,location,preferred_categories,account_created,loyalty_points,total_purchases
+U0001,Evelyn Brown,user1@email.com,25-34,Other,Ahmedabad,Books|Electronics|Sports,2025-01-10,3821,53
+U0002,Andrew Wilson,user2@email.com,18-24,Other,Mumbai,Home & Kitchen|Clothing|Toys|Grocery,2025-05-18,1987,74
+U0003,Amit Patel,user3@email.com,25-34,Other,New York,Beauty|Clothing|Electronics,2025-11-15,3300,85
+U0004,John Wilson,user4@email.com,55-64,Female,Mumbai,Beauty,2025-06-20,876,42
+U0005,Chris Martinez,user5@email.com,55-64,Female,Singapore,Beauty|Toys|Books,2024-08-02,4184,94
+U0006,Sarah Miller,user6@email.com,55-64,Male,New York,Sports|Home & Kitchen|Books|Clothing,2025-05-19,2546,92
+U0007,John Anderson,user7@email.com,55-64,Other,Chennai,Home & Kitchen,2026-03-23,1253,77
+U0008,Lisa Thomas,user8@email.com,18-24,Male,Chennai,Toys,2026-02-26,4143,56
+U0009,Harper Johnson,user9@email.com,18-24,Female,Pune,Sports|Clothing|Home & Kitchen|Grocery,2025-06-30,3597,84
+U0010,Lisa Singh,user10@email.com,25-34,Other,Mumbai,Sports|Clothing,2024-05-19,1971,21
+U0011,Amit Taylor,user11@email.com,25-34,Female,Ahmedabad,Grocery|Books|Beauty,2024-07-29,4038,47
+U0012,Isabella Kumar,user12@email.com,45-54,Other,Delhi,Clothing|Toys|Electronics|Home & Kitchen,2026-02-23,2321,58
+U0013,Lisa Moore,user13@email.com,45-54,Male,Los Angeles,Beauty|Books|Clothing,2024-05-20,3641,5
+U0014,Mark Jones,user14@email.com,45-54,Other,Ahmedabad,Beauty|Home & Kitchen|Sports,2024-10-27,4122,26
+U0015,Mark Thomas,user15@email.com,45-54,Other,Delhi,Sports|Toys,2024-05-21,4613,43
+U0016,Abigail Jones,user16@email.com,35-44,Other,Kolkata,Home & Kitchen|Clothing|Books|Electronics,2025-03-03,3864,77
+U0017,Emma Moore,user17@email.com,65+,Other,London,Sports|Books|Toys,2024-07-29,4757,44
+U0018,Pooja Jackson,user18@email.com,45-54,Male,Mumbai,Sports,2025-07-29,790,85
+U0019,Chris Anderson,user19@email.com,65+,Female,Hyderabad,Electronics|Beauty,2025-09-26,3146,96
+U0020,Andrew Williams,user20@email.com,18-24,Other,Kolkata,Beauty,2026-01-08,3617,97
+U0021,Amelia Jackson,user21@email.com,65+,Male,Bangalore,Home & Kitchen|Books|Electronics,2025-03-02,1091,81
+U0022,Rahul Taylor,user22@email.com,25-34,Male,Kolkata,Toys|Books|Sports|Home & Kitchen,2025-08-29,1327,55
+U0023,Neha Miller,user23@email.com,18-24,Other,Mumbai,Electronics,2026-02-17,1151,0
+U0024,Amelia Singh,user24@email.com,55-64,Other,Delhi,Sports|Books|Clothing,2024-06-04,4326,63
+U0025,Robert Miller,user25@email.com,55-64,Female,New York,Books|Grocery|Clothing,2025-11-02,550,56
+U0026,Evelyn Martin,user26@email.com,45-54,Male,Los Angeles,Sports,2024-10-10,2443,12
+U0027,Lisa Anderson,user27@email.com,25-34,Male,Los Angeles,Beauty|Home & Kitchen|Sports,2025-07-09,3198,90
+U0028,Mark Williams,user28@email.com,25-34,Female,Delhi,Grocery|Electronics,2024-06-28,464,69
+U0029,Lisa Moore,user29@email.com,45-54,Female,London,Beauty,2025-04-11,3452,33
+U0030,Robert Sharma,user30@email.com,18-24,Male,Chennai,Beauty|Home & Kitchen|Electronics,2026-01-08,4619,78
+U0031,Mike Patel,user31@email.com,18-24,Female,Los Angeles,Toys,2025-11-11,2216,92
+U0032,Mike Brown,user32@email.com,18-24,Female,New York,Books|Electronics,2024-11-19,2485,100
+U0033,William Smith,user33@email.com,18-24,Male,Chennai,Beauty|Grocery|Electronics|Toys,2025-02-20,3090,89
+U0034,Tom Singh,user34@email.com,65+,Female,New York,Home & Kitchen|Electronics,2025-11-23,3012,45
+U0035,Robert Sharma,user35@email.com,45-54,Male,Chennai,Home & Kitchen|Grocery,2026-03-13,1860,52
+U0036,Vikram Moore,user36@email.com,18-24,Male,Singapore,Beauty|Toys,2026-01-24,1038,56
+U0037,Emma Martinez,user37@email.com,18-24,Female,Hyderabad,Grocery|Home & Kitchen,2024-07-11,3258,61
+U0038,Lisa Williams,user38@email.com,18-24,Female,New York,Toys|Books,2025-03-23,1804,56
+U0039,Mia Patel,user39@email.com,55-64,Female,London,Grocery|Sports,2024-04-08,4435,64
+U0040,Chris Johnson,user40@email.com,35-44,Female,Singapore,Grocery|Beauty|Home & Kitchen|Books,2024-10-06,1888,39
+U0041,Anjali Miller,user41@email.com,18-24,Female,Singapore,Beauty|Home & Kitchen,2024-04-07,3606,83
+U0042,Abigail Brown,user42@email.com,18-24,Female,Mumbai,Grocery|Toys|Electronics,2025-05-20,692,7
+U0043,Isabella Jackson,user43@email.com,45-54,Female,Mumbai,Clothing|Electronics|Beauty|Home & Kitchen,2025-08-25,3107,23
+U0044,Evelyn Taylor,user44@email.com,18-24,Other,Kolkata,Books,2026-02-25,4986,96
+U0045,Charlotte Rodriguez,user45@email.com,55-64,Male,Mumbai,Clothing|Toys|Electronics,2026-01-24,894,70
+U0046,Steven Martinez,user46@email.com,55-64,Female,Pune,Sports|Electronics|Clothing,2025-07-23,1080,1
+U0047,Isabella Rodriguez,user47@email.com,18-24,Male,New York,Books|Grocery|Electronics,2026-02-12,2246,46
+U0048,Isabella Rodriguez,user48@email.com,65+,Other,Mumbai,Grocery,2024-08-18,2629,33
+U0049,Emma Wilson,user49@email.com,45-54,Male,Ahmedabad,Toys,2026-02-14,2938,61
+U0050,Anjali Miller,user50@email.com,45-54,Male,Los Angeles,Grocery,2024-07-07,4517,40
+U0051,David Wilson,user51@email.com,25-34,Female,Kolkata,Toys|Home & Kitchen|Clothing,2024-06-16,1429,18
+U0052,Sarah Davis,user52@email.com,18-24,Other,Mumbai,Toys|Grocery,2025-05-03,343,70
+U0053,William Johnson,user53@email.com,65+,Female,Kolkata,Books,2024-09-16,366,76
+U0054,Sophia Patel,user54@email.com,18-24,Male,New York,Home & Kitchen|Grocery|Beauty|Toys,2025-08-27,2668,73
+U0055,Amelia Singh,user55@email.com,18-24,Other,Pune,Sports|Beauty|Toys,2024-07-10,2951,42
+U0056,Andrew Martin,user56@email.com,35-44,Female,Kolkata,Sports,2025-03-11,365,37
+U0057,Anna Moore,user57@email.com,18-24,Male,Los Angeles,Books|Grocery,2024-10-19,4763,91
+U0058,Mark Miller,user58@email.com,45-54,Other,Mumbai,Clothing|Toys,2024-05-28,642,9
+U0059,William Moore,user59@email.com,55-64,Other,London,Home & Kitchen|Clothing|Grocery|Beauty,2024-07-10,3869,84
+U0060,Neha Thomas,user60@email.com,45-54,Female,Kolkata,Grocery|Home & Kitchen,2025-04-21,1991,98
+U0061,Amelia Davis,user61@email.com,45-54,Female,Singapore,Electronics,2024-12-23,3358,46
+U0062,Emily Patel,user62@email.com,55-64,Other,Delhi,Toys|Grocery|Home & Kitchen,2024-12-19,3431,29
+U0063,Rahul Jones,user63@email.com,55-64,Male,Pune,Grocery|Clothing,2025-06-03,2798,40
+U0064,Lisa Williams,user64@email.com,45-54,Female,New York,Toys|Books,2025-09-02,1473,58
+U0065,John Garcia,user65@email.com,18-24,Female,Kolkata,Home & Kitchen|Toys|Beauty|Electronics,2026-02-27,1367,9
+U0066,Tom Thomas,user66@email.com,55-64,Female,Pune,Sports|Electronics|Books,2024-08-30,1977,91
+U0067,Matthew Brown,user67@email.com,35-44,Female,Los Angeles,Beauty,2026-01-07,2907,57
+U0068,Andrew Martin,user68@email.com,45-54,Other,Pune,Toys|Books|Home & Kitchen,2025-09-17,4829,65
+U0069,Emily Jones,user69@email.com,18-24,Other,Los Angeles,Toys|Electronics|Sports,2024-12-29,1447,65
+U0070,Pooja Rodriguez,user70@email.com,18-24,Male,Kolkata,Books|Beauty|Grocery|Toys,2024-10-02,4749,65
+U0071,Evelyn Martinez,user71@email.com,35-44,Female,Hyderabad,Sports|Beauty,2025-08-20,3526,66
+U0072,Isabella Moore,user72@email.com,55-64,Female,Delhi,Grocery|Home & Kitchen|Beauty,2025-06-02,2243,62
+U0073,Joshua Davis,user73@email.com,25-34,Female,Kolkata,Electronics,2024-05-10,2282,18
+U0074,Chris Miller,user74@email.com,55-64,Other,Bangalore,Beauty,2024-09-17,4406,24
+U0075,John Anderson,user75@email.com,18-24,Female,Chennai,Clothing|Books|Electronics,2024-10-06,1033,58
+U0076,Matthew Brown,user76@email.com,65+,Other,Delhi,Clothing|Electronics|Sports|Beauty,2025-11-03,2281,93
+U0077,Lisa Patel,user77@email.com,18-24,Other,Chennai,Books,2025-10-14,4153,42
+U0078,Isabella Wilson,user78@email.com,65+,Other,New York,Books,2026-02-12,3550,12
+U0079,Neha Sharma,user79@email.com,25-34,Other,London,Beauty,2025-07-15,1121,75
+U0080,Steven Davis,user80@email.com,65+,Male,Kolkata,Sports|Electronics|Home & Kitchen|Clothing,2025-06-07,1079,25
+U0081,Emily Thomas,user81@email.com,65+,Other,Chennai,Clothing,2026-01-14,4019,71
+U0082,Olivia Garcia,user82@email.com,18-24,Female,Singapore,Clothing|Books|Grocery,2025-07-26,2856,61
+U0083,Neha Garcia,user83@email.com,35-44,Male,Kolkata,Toys|Clothing|Books|Electronics,2024-07-19,2925,69
+U0084,Raj Martinez,user84@email.com,18-24,Male,Delhi,Clothing|Electronics|Sports,2025-07-13,3480,14
+U0085,Emma Wilson,user85@email.com,35-44,Other,Delhi,Clothing|Books|Home & Kitchen,2024-11-13,4007,76
+U0086,Andrew Davis,user86@email.com,18-24,Female,Kolkata,Clothing|Beauty,2024-08-25,2647,33
+U0087,Anthony Singh,user87@email.com,45-54,Female,Pune,Grocery|Beauty|Sports|Electronics,2025-08-11,2783,81
+U0088,Mike Martinez,user88@email.com,45-54,Female,Chennai,Electronics|Clothing,2024-06-21,903,78
+U0089,Charlotte Jones,user89@email.com,55-64,Other,Mumbai,Clothing,2025-12-21,2730,45
+U0090,Anjali Williams,user90@email.com,65+,Male,New York,Books|Grocery,2025-09-01,1286,68
+U0091,Harper Davis,user91@email.com,35-44,Male,Hyderabad,Clothing|Home & Kitchen|Grocery,2025-07-12,111,4
+U0092,Jane Thomas,user92@email.com,18-24,Other,Pune,Beauty|Home & Kitchen|Sports|Books,2026-02-27,1884,80
+U0093,Sophia Johnson,user93@email.com,35-44,Other,Delhi,Clothing|Home & Kitchen|Books|Sports,2025-12-27,626,9
+U0094,Amit Singh,user94@email.com,18-24,Male,Singapore,Home & Kitchen|Books,2024-07-29,3204,24
+U0095,Mia Sharma,user95@email.com,45-54,Other,Singapore,Grocery,2025-06-16,3759,25
+U0096,Chris Rodriguez,user96@email.com,65+,Other,Ahmedabad,Grocery|Electronics|Beauty|Home & Kitchen,2025-01-31,4595,35
+U0097,Raj Martinez,user97@email.com,65+,Other,New York,Clothing|Beauty,2024-10-31,3224,47
+U0098,Vikram Brown,user98@email.com,45-54,Male,Los Angeles,Clothing,2025-07-29,3662,47
+U0099,Raj Moore,user99@email.com,18-24,Other,Kolkata,Sports|Clothing|Books,2025-12-28,781,71
+U0100,James Miller,user100@email.com,45-54,Other,Chennai,Sports,2025-02-04,3879,66
+U0101,Rahul Davis,user101@email.com,18-24,Female,Kolkata,Grocery|Books|Sports|Home & Kitchen,2026-02-14,2633,88
+U0102,Rahul Jackson,user102@email.com,45-54,Male,Kolkata,Toys|Grocery,2024-10-28,2564,83
+U0103,Sophia Sharma,user103@email.com,45-54,Other,Ahmedabad,Home & Kitchen,2025-01-12,634,48
+U0104,Tom Smith,user104@email.com,25-34,Other,Singapore,Sports,2025-09-02,3584,14
+U0105,Mike Singh,user105@email.com,45-54,Male,London,Sports|Books|Grocery|Electronics,2025-02-08,75,37
+U0106,Lisa Singh,user106@email.com,35-44,Other,London,Books|Grocery|Sports,2024-08-23,1359,18
+U0107,Matthew Thomas,user107@email.com,65+,Male,Los Angeles,Grocery|Electronics|Clothing,2025-08-20,2704,95
+U0108,Tom Garcia,user108@email.com,55-64,Other,Ahmedabad,Books,2025-01-21,1468,19
+U0109,Raj Williams,user109@email.com,18-24,Female,Singapore,Electronics|Books,2025-12-17,4405,58
+U0110,Charlotte Brown,user110@email.com,18-24,Other,Ahmedabad,Home & Kitchen|Sports,2024-06-10,4580,28
+U0111,Mark Martin,user111@email.com,18-24,Male,Kolkata,Clothing|Grocery|Books,2025-05-14,3008,79
+U0112,Harper Rodriguez,user112@email.com,55-64,Other,London,Home & Kitchen|Grocery,2025-10-18,843,93
+U0113,Olivia Rodriguez,user113@email.com,25-34,Female,Los Angeles,Sports,2024-10-05,4811,82
+U0114,Steven Sharma,user114@email.com,55-64,Other,Los Angeles,Toys|Home & Kitchen|Clothing,2026-03-21,1899,27
+U0115,Emily Jackson,user115@email.com,25-34,Male,Bangalore,Beauty|Sports|Toys|Books,2025-11-03,4191,56
+U0116,Evelyn Anderson,user116@email.com,35-44,Female,New York,Electronics,2024-08-27,3221,48
+U0117,Steven Anderson,user117@email.com,35-44,Female,New York,Home & Kitchen|Grocery|Toys,2025-10-04,2275,91
+U0118,Anna Singh,user118@email.com,55-64,Female,Ahmedabad,Home & Kitchen|Grocery|Electronics,2024-05-25,2852,22
+U0119,Jane Patel,user119@email.com,45-54,Other,Hyderabad,Electronics|Grocery|Clothing|Home & Kitchen,2025-02-25,3065,22
+U0120,John Miller,user120@email.com,45-54,Female,New York,Beauty|Grocery,2025-05-10,2690,12
+U0121,Amelia Rodriguez,user121@email.com,55-64,Male,Los Angeles,Beauty|Books|Sports,2024-06-04,3921,50
+U0122,Mike Rodriguez,user122@email.com,35-44,Other,Mumbai,Toys,2024-07-09,3723,62
+U0123,Emma Anderson,user123@email.com,65+,Other,New York,Beauty,2025-03-10,236,78
+U0124,Anna Garcia,user124@email.com,25-34,Male,Pune,Beauty,2024-12-24,510,40
+U0125,Chris Taylor,user125@email.com,35-44,Male,London,Books,2024-05-04,2592,90
+U0126,James Moore,user126@email.com,65+,Female,New York,Clothing,2025-01-21,503,8
+U0127,Robert Thomas,user127@email.com,25-34,Other,Kolkata,Sports,2024-12-24,364,35
+U0128,Robert Thomas,user128@email.com,45-54,Male,London,Grocery,2025-06-16,4592,44
+U0129,Lisa Sharma,user129@email.com,45-54,Other,Singapore,Toys,2025-12-23,952,11
+U0130,Emma Williams,user130@email.com,25-34,Female,Los Angeles,Sports,2026-03-13,1781,81
+U0131,Amelia Wilson,user131@email.com,18-24,Other,Chennai,Electronics|Books|Clothing,2025-11-08,2543,6
+U0132,Steven Martinez,user132@email.com,25-34,Female,Bangalore,Clothing|Home & Kitchen|Toys,2025-06-17,1632,22
+U0133,Matthew Rodriguez,user133@email.com,65+,Female,Kolkata,Toys,2025-03-25,4740,46
+U0134,Mark Martin,user134@email.com,55-64,Female,London,Beauty|Clothing,2024-08-01,3159,19
+U0135,Vikram Moore,user135@email.com,25-34,Other,Pune,Grocery|Home & Kitchen|Sports,2024-04-06,4126,70
+U0136,Isabella Williams,user136@email.com,55-64,Male,Kolkata,Toys|Sports,2026-02-19,944,66
+U0137,Emma Anderson,user137@email.com,25-34,Female,Los Angeles,Books|Grocery|Electronics,2024-05-18,4820,4
+U0138,Anthony Brown,user138@email.com,65+,Female,Mumbai,Clothing|Electronics,2025-04-15,2758,82
+U0139,Chris Garcia,user139@email.com,35-44,Female,Bangalore,Sports|Clothing|Beauty|Electronics,2024-06-30,3739,75
+U0140,Rahul Singh,user140@email.com,65+,Female,Ahmedabad,Grocery|Books,2025-03-06,4922,43
+U0141,Raj Kumar,user141@email.com,35-44,Male,Chennai,Clothing,2025-01-11,2206,73
+U0142,Harper Moore,user142@email.com,18-24,Male,New York,Grocery|Toys,2024-04-08,4293,25
+U0143,Rahul Jones,user143@email.com,25-34,Other,Hyderabad,Home & Kitchen,2025-05-11,1158,44
+U0144,Abigail Kumar,user144@email.com,25-34,Female,Mumbai,Electronics|Home & Kitchen,2025-05-19,2519,10
+U0145,Emma Davis,user145@email.com,25-34,Female,Delhi,Sports|Books,2024-09-01,3065,0
+U0146,Raj Garcia,user146@email.com,35-44,Male,Ahmedabad,Electronics|Toys|Books|Clothing,2024-12-04,1988,97
+U0147,Chris Kumar,user147@email.com,25-34,Female,Bangalore,Books|Sports|Toys|Electronics,2024-07-20,3226,68
+U0148,David Patel,user148@email.com,45-54,Other,Singapore,Electronics,2024-07-08,1459,98
+U0149,Sophia Patel,user149@email.com,35-44,Female,New York,Clothing,2026-01-03,1884,17
+U0150,Priya Miller,user150@email.com,18-24,Male,Kolkata,Home & Kitchen|Sports|Electronics|Toys,2025-01-12,1234,36
+U0151,Mia Kumar,user151@email.com,65+,Female,Mumbai,Clothing|Home & Kitchen|Toys,2025-02-09,4238,13
+U0152,Abigail Williams,user152@email.com,35-44,Other,Singapore,Clothing,2026-03-11,1317,40
+U0153,Tom Moore,user153@email.com,55-64,Female,London,Beauty|Electronics|Books|Clothing,2025-01-15,446,38
+U0154,Evelyn Rodriguez,user154@email.com,65+,Other,Delhi,Books|Clothing|Electronics|Sports,2024-09-22,2988,14
+U0155,Emma Singh,user155@email.com,55-64,Female,London,Sports,2026-03-16,2761,90
+U0156,Pooja Rodriguez,user156@email.com,25-34,Other,Los Angeles,Clothing|Beauty|Electronics|Sports,2026-02-11,995,62
+U0157,Abigail Patel,user157@email.com,18-24,Other,London,Grocery|Electronics|Sports,2024-05-01,2426,98
+U0158,Jane Taylor,user158@email.com,35-44,Male,Kolkata,Clothing|Beauty|Electronics,2025-04-25,2438,81
+U0159,Mike Jackson,user159@email.com,18-24,Female,Singapore,Clothing,2025-07-12,1435,10
+U0160,Vikram Brown,user160@email.com,25-34,Other,Bangalore,Clothing|Sports|Toys|Electronics,2024-04-17,1999,93
+U0161,Neha Moore,user161@email.com,45-54,Male,Delhi,Books|Beauty|Home & Kitchen,2024-07-08,828,48
+U0162,Amit Williams,user162@email.com,35-44,Other,Singapore,Clothing|Electronics|Beauty,2025-09-16,2104,92
+U0163,Emily Singh,user163@email.com,18-24,Male,Los Angeles,Grocery|Toys|Clothing,2024-09-17,1996,88
+U0164,Sarah Patel,user164@email.com,55-64,Female,Chennai,Grocery|Books|Clothing|Home & Kitchen,2025-06-13,4108,85
+U0165,Mike Jackson,user165@email.com,45-54,Male,London,Grocery|Beauty|Electronics,2025-08-23,153,100
+U0166,Andrew Jones,user166@email.com,35-44,Female,Ahmedabad,Home & Kitchen|Toys|Clothing,2026-03-05,2659,28
+U0167,David Jackson,user167@email.com,35-44,Other,Singapore,Clothing|Books|Grocery|Sports,2024-09-15,3187,60
+U0168,Anjali Smith,user168@email.com,35-44,Female,Hyderabad,Toys|Home & Kitchen|Electronics,2024-10-29,1725,68
+U0169,James Kumar,user169@email.com,35-44,Female,Mumbai,Toys,2024-08-26,2828,10
+U0170,Olivia Thomas,user170@email.com,35-44,Female,Kolkata,Toys|Books|Electronics,2026-02-21,1277,79
+U0171,Pooja Garcia,user171@email.com,55-64,Female,Los Angeles,Clothing|Toys|Beauty|Sports,2024-08-31,4020,30
+U0172,Steven Taylor,user172@email.com,25-34,Female,Los Angeles,Home & Kitchen,2025-02-11,1788,27
+U0173,Lisa Moore,user173@email.com,35-44,Male,Bangalore,Clothing|Sports|Home & Kitchen|Electronics,2024-07-18,2284,40
+U0174,Amelia Martin,user174@email.com,18-24,Other,London,Clothing|Home & Kitchen|Electronics,2024-11-02,3800,36
+U0175,Joshua Garcia,user175@email.com,25-34,Female,Kolkata,Books,2024-12-03,1411,87
+U0176,Chris Kumar,user176@email.com,55-64,Other,Pune,Clothing|Home & Kitchen|Books|Beauty,2024-06-28,1836,17
+U0177,Amit Williams,user177@email.com,55-64,Other,Singapore,Beauty|Sports|Grocery|Home & Kitchen,2025-10-04,4663,80
+U0178,Raj Williams,user178@email.com,35-44,Male,Singapore,Electronics|Clothing|Home & Kitchen|Toys,2025-03-11,1960,22
+U0179,Raj Miller,user179@email.com,35-44,Male,Kolkata,Beauty,2025-08-24,4731,59
+U0180,Abigail Davis,user180@email.com,65+,Other,Ahmedabad,Sports|Electronics,2024-10-27,910,77
+U0181,Charlotte Garcia,user181@email.com,25-34,Female,Singapore,Beauty,2026-02-18,3328,66
+U0182,Raj Kumar,user182@email.com,18-24,Female,Kolkata,Beauty,2024-12-29,3938,92
+U0183,Sarah Martinez,user183@email.com,45-54,Other,Mumbai,Clothing|Books|Grocery,2024-06-17,3604,54
+U0184,Lisa Brown,user184@email.com,25-34,Female,Los Angeles,Sports,2025-03-13,3382,84
+U0185,Charlotte Jones,user185@email.com,25-34,Female,Chennai,Home & Kitchen|Sports|Books,2024-04-12,606,58
+U0186,Priya Davis,user186@email.com,35-44,Female,Kolkata,Books|Clothing|Electronics|Sports,2024-08-19,2255,76
+U0187,Mike Jones,user187@email.com,25-34,Other,Kolkata,Electronics,2025-03-09,4616,46
+U0188,Matthew Martinez,user188@email.com,65+,Male,Los Angeles,Toys|Books|Electronics,2024-05-03,2415,19
+U0189,Tom Jones,user189@email.com,55-64,Female,Pune,Electronics|Beauty|Home & Kitchen,2024-08-03,2481,18
+U0190,Pooja Smith,user190@email.com,35-44,Female,Singapore,Toys|Grocery|Home & Kitchen|Sports,2024-06-02,1276,75
+U0191,Amit Sharma,user191@email.com,55-64,Female,Pune,Sports|Clothing|Grocery|Electronics,2025-09-25,3964,48
+U0192,John Williams,user192@email.com,35-44,Male,Kolkata,Electronics|Home & Kitchen,2025-06-12,4985,99
+U0193,Lisa Martin,user193@email.com,25-34,Female,Ahmedabad,Beauty|Clothing|Books|Grocery,2025-08-02,1659,46
+U0194,Mike Kumar,user194@email.com,65+,Male,Hyderabad,Grocery,2024-09-03,4380,94
+U0195,Vikram Williams,user195@email.com,18-24,Female,Los Angeles,Electronics|Sports,2025-09-17,2007,29
+U0196,Abigail Garcia,user196@email.com,18-24,Other,Kolkata,Home & Kitchen|Books|Toys,2026-01-17,1085,66
+U0197,Mia Johnson,user197@email.com,25-34,Male,Chennai,Toys|Beauty|Grocery|Clothing,2025-05-01,598,25
+U0198,Raj Brown,user198@email.com,45-54,Male,Ahmedabad,Home & Kitchen|Grocery,2024-07-28,1761,76
+U0199,Priya Martinez,user199@email.com,55-64,Male,Los Angeles,Home & Kitchen|Books|Electronics|Toys,2024-07-28,3737,0
+U0200,Daniel Singh,user200@email.com,55-64,Female,Ahmedabad,Books|Grocery,2024-11-14,4212,36
+U0201,Mia Rodriguez,user201@email.com,55-64,Male,Hyderabad,Grocery|Books|Electronics,2025-11-29,1492,62
+U0202,John Sharma,user202@email.com,55-64,Female,Ahmedabad,Sports|Beauty,2025-01-05,2495,12
+U0203,Joshua Sharma,user203@email.com,65+,Other,New York,Electronics|Clothing,2025-12-02,1898,27
+U0204,Mia Thomas,user204@email.com,35-44,Female,New York,Home & Kitchen|Books|Sports|Grocery,2025-08-20,4677,86
+U0205,Anna Sharma,user205@email.com,25-34,Male,Pune,Sports|Grocery,2024-05-14,1287,41
+U0206,Neha Anderson,user206@email.com,65+,Other,Pune,Electronics|Sports|Toys,2025-05-17,3037,18
+U0207,Mia Sharma,user207@email.com,65+,Female,Singapore,Toys|Sports|Electronics,2024-08-24,3223,97
+U0208,Andrew Smith,user208@email.com,45-54,Male,Pune,Sports|Electronics|Toys,2026-03-04,1656,26
+U0209,Daniel Martinez,user209@email.com,35-44,Male,Hyderabad,Clothing|Sports|Grocery|Books,2025-08-31,1761,79
+U0210,Amit Wilson,user210@email.com,35-44,Male,Delhi,Sports|Toys,2024-11-17,4857,60
+U0211,Mike Kumar,user211@email.com,65+,Other,Ahmedabad,Grocery|Toys,2024-07-31,3072,7
+U0212,Chris Johnson,user212@email.com,65+,Female,Kolkata,Toys|Sports|Beauty,2024-11-25,1100,95
+U0213,David Sharma,user213@email.com,65+,Female,Bangalore,Grocery|Toys,2025-08-31,4602,11
+U0214,Joshua Davis,user214@email.com,35-44,Other,New York,Grocery|Books|Beauty,2025-10-31,557,100
+U0215,Anthony Patel,user215@email.com,45-54,Other,Chennai,Books|Electronics,2025-08-02,3774,46
+U0216,Charlotte Miller,user216@email.com,65+,Other,Kolkata,Beauty|Home & Kitchen|Toys,2024-06-04,3365,54
+U0217,Harper Anderson,user217@email.com,18-24,Other,Mumbai,Beauty|Grocery|Electronics,2026-02-19,4130,41
+U0218,Vikram Anderson,user218@email.com,35-44,Other,Hyderabad,Home & Kitchen,2024-08-22,754,71
+U0219,Lisa Taylor,user219@email.com,25-34,Other,Delhi,Electronics|Clothing|Beauty|Toys,2025-06-13,3815,57
+U0220,Anna Martin,user220@email.com,35-44,Male,Bangalore,Toys|Grocery|Books,2025-01-05,175,51
+U0221,Rahul Martinez,user221@email.com,18-24,Other,Pune,Beauty,2025-08-05,2640,54
+U0222,Anna Rodriguez,user222@email.com,25-34,Other,London,Toys|Books|Clothing,2025-08-30,4705,45
+U0223,Rahul Jones,user223@email.com,25-34,Male,Chennai,Sports|Beauty|Clothing,2024-09-23,4930,5
+U0224,Tom Taylor,user224@email.com,35-44,Male,Hyderabad,Electronics|Books|Home & Kitchen,2025-08-29,2481,20
+U0225,Evelyn Rodriguez,user225@email.com,25-34,Male,Hyderabad,Sports,2024-12-28,1008,48
+U0226,Jane Wilson,user226@email.com,65+,Other,Chennai,Beauty|Electronics|Clothing|Books,2025-09-01,1684,98
+U0227,Steven Moore,user227@email.com,18-24,Male,Bangalore,Sports,2025-08-21,985,62
+U0228,Mark Sharma,user228@email.com,45-54,Male,Chennai,Books,2024-11-19,2091,65
+U0229,Lisa Wilson,user229@email.com,18-24,Male,Pune,Clothing|Toys|Beauty|Sports,2025-03-19,2539,8
+U0230,Evelyn Martin,user230@email.com,35-44,Male,Singapore,Clothing,2024-11-26,129,35
+U0231,Anthony Johnson,user231@email.com,25-34,Male,Bangalore,Sports,2024-10-08,1275,17
+U0232,Raj Johnson,user232@email.com,18-24,Other,Chennai,Books|Grocery|Electronics,2025-10-13,3434,22
+U0233,Emma Thomas,user233@email.com,25-34,Other,London,Books|Beauty,2025-10-08,245,63
+U0234,Olivia Martinez,user234@email.com,45-54,Other,Hyderabad,Books|Beauty|Clothing,2025-04-18,233,60
+U0235,Mike Jones,user235@email.com,45-54,Male,New York,Sports|Home & Kitchen|Beauty|Books,2025-03-31,1824,11
+U0236,Andrew Williams,user236@email.com,18-24,Female,Ahmedabad,Toys|Home & Kitchen|Grocery|Beauty,2025-05-09,3901,60
+U0237,Daniel Jones,user237@email.com,35-44,Other,New York,Home & Kitchen|Electronics|Clothing,2024-08-16,1607,16
+U0238,William Thomas,user238@email.com,25-34,Male,Chennai,Home & Kitchen,2025-02-03,2312,78
+U0239,Chris Davis,user239@email.com,25-34,Female,Bangalore,Books|Toys|Electronics,2024-05-08,4839,66
+U0240,Neha Moore,user240@email.com,35-44,Male,Hyderabad,Books|Toys|Home & Kitchen|Grocery,2026-02-16,3154,80
+U0241,Sarah Miller,user241@email.com,25-34,Male,Bangalore,Electronics,2025-10-09,3250,41
+U0242,John Moore,user242@email.com,45-54,Female,Hyderabad,Clothing|Electronics,2025-08-16,3712,79
+U0243,Daniel Taylor,user243@email.com,45-54,Male,Singapore,Books|Sports|Home & Kitchen,2025-07-05,2793,62
+U0244,Anjali Wilson,user244@email.com,65+,Male,London,Grocery|Beauty|Sports,2025-01-11,208,69
+U0245,Tom Brown,user245@email.com,25-34,Female,Delhi,Grocery,2025-11-14,2847,39
+U0246,Joshua Singh,user246@email.com,55-64,Male,New York,Clothing|Toys,2024-10-16,1596,18
+U0247,William Smith,user247@email.com,25-34,Other,Singapore,Sports|Grocery|Clothing,2024-10-02,384,68
+U0248,Amelia Taylor,user248@email.com,25-34,Other,New York,Books|Home & Kitchen,2025-12-11,1356,81
+U0249,William Jones,user249@email.com,55-64,Other,Pune,Grocery|Beauty,2025-02-06,2428,49
+U0250,Neha Singh,user250@email.com,45-54,Female,Hyderabad,Grocery|Beauty,2026-01-06,2058,90
+U0251,Anjali Martinez,user251@email.com,25-34,Other,Los Angeles,Beauty,2025-01-27,1149,18
+U0252,Raj Garcia,user252@email.com,25-34,Female,Bangalore,Clothing|Grocery|Home & Kitchen|Books,2025-03-30,577,28
+U0253,Isabella Jones,user253@email.com,45-54,Male,Singapore,Electronics|Toys,2025-10-29,2256,97
+U0254,Anthony Smith,user254@email.com,65+,Male,New York,Home & Kitchen|Clothing|Books,2024-07-19,3859,29
+U0255,Joshua Martinez,user255@email.com,18-24,Other,Singapore,Sports|Beauty|Books|Toys,2025-06-18,335,48
+U0256,Daniel Brown,user256@email.com,65+,Female,Pune,Toys|Clothing,2025-05-29,1840,66
+U0257,Chris Williams,user257@email.com,65+,Other,Los Angeles,Electronics|Clothing|Books,2024-11-02,3542,53
+U0258,Sarah Martin,user258@email.com,18-24,Female,Singapore,Grocery|Books|Toys,2025-04-21,3437,85
+U0259,Daniel Patel,user259@email.com,18-24,Male,Delhi,Electronics|Grocery|Toys|Home & Kitchen,2024-07-26,3553,85
+U0260,Isabella Brown,user260@email.com,65+,Female,New York,Clothing|Beauty|Grocery|Toys,2024-07-27,807,73
+U0261,Chris Brown,user261@email.com,25-34,Female,Los Angeles,Clothing|Books|Toys|Beauty,2025-04-02,3606,58
+U0262,Rahul Thomas,user262@email.com,18-24,Female,London,Beauty|Home & Kitchen|Grocery|Clothing,2026-02-27,2694,12
+U0263,Matthew Singh,user263@email.com,18-24,Other,Ahmedabad,Books|Clothing|Toys,2025-04-05,2886,31
+U0264,Isabella Wilson,user264@email.com,18-24,Female,Ahmedabad,Sports|Home & Kitchen|Grocery,2024-09-09,2636,94
+U0265,Harper Patel,user265@email.com,25-34,Female,Delhi,Books|Grocery|Clothing,2025-08-02,2593,39
+U0266,Chris Williams,user266@email.com,65+,Female,Hyderabad,Sports|Clothing|Electronics|Home & Kitchen,2025-06-25,3976,44
+U0267,Charlotte Wilson,user267@email.com,35-44,Male,Bangalore,Beauty|Toys|Home & Kitchen,2024-08-05,2543,64
+U0268,Anjali Martinez,user268@email.com,55-64,Other,Bangalore,Home & Kitchen|Toys|Beauty|Books,2024-03-25,4898,84
+U0269,Harper Rodriguez,user269@email.com,25-34,Other,Hyderabad,Clothing|Home & Kitchen|Electronics,2025-12-07,2407,78
+U0270,Rahul Williams,user270@email.com,35-44,Male,Ahmedabad,Electronics,2024-09-08,1269,85
+U0271,Isabella Smith,user271@email.com,45-54,Male,Singapore,Electronics|Home & Kitchen,2024-12-28,1769,18
+U0272,John Martinez,user272@email.com,25-34,Male,Los Angeles,Toys|Electronics|Grocery|Books,2024-08-19,1574,52
+U0273,Emma Thomas,user273@email.com,55-64,Female,London,Grocery|Books|Sports|Clothing,2025-01-06,3032,46
+U0274,Sophia Sharma,user274@email.com,55-64,Female,Delhi,Books|Clothing,2024-04-03,2022,68
+U0275,Pooja Jones,user275@email.com,18-24,Other,Singapore,Books|Beauty|Grocery|Home & Kitchen,2025-04-01,4538,28
+U0276,Abigail Rodriguez,user276@email.com,55-64,Male,Ahmedabad,Toys|Grocery|Electronics|Beauty,2025-09-29,181,71
+U0277,Joshua Taylor,user277@email.com,65+,Male,Hyderabad,Sports|Beauty|Books|Toys,2026-01-16,2261,72
+U0278,Daniel Smith,user278@email.com,65+,Other,Ahmedabad,Sports|Electronics|Home & Kitchen|Clothing,2025-05-10,4410,89
+U0279,Mia Sharma,user279@email.com,25-34,Other,New York,Sports|Clothing|Grocery|Books,2025-05-05,55,78
+U0280,Sarah Patel,user280@email.com,55-64,Male,Delhi,Clothing,2025-10-09,1594,31
+U0281,Emma Garcia,user281@email.com,18-24,Other,Ahmedabad,Books,2025-12-22,771,51
+U0282,Rahul Kumar,user282@email.com,45-54,Female,Singapore,Sports|Clothing|Toys|Home & Kitchen,2025-12-15,2549,45
+U0283,Emma Singh,user283@email.com,35-44,Female,Delhi,Grocery|Electronics,2025-08-30,1856,44
+U0284,Emily Sharma,user284@email.com,45-54,Male,New York,Beauty|Grocery|Toys,2024-08-30,484,87
+U0285,Amelia Brown,user285@email.com,25-34,Male,New York,Beauty,2025-04-23,3151,39
+U0286,Jane Moore,user286@email.com,55-64,Female,Delhi,Electronics|Books,2024-06-26,4081,23
+U0287,Vikram Miller,user287@email.com,35-44,Male,London,Books|Grocery,2025-09-23,3610,90
+U0288,Emma Thomas,user288@email.com,25-34,Female,Mumbai,Home & Kitchen,2025-05-08,2387,13
+U0289,Mark Garcia,user289@email.com,55-64,Other,Bangalore,Toys,2025-09-07,4943,19
+U0290,Charlotte Wilson,user290@email.com,65+,Other,Pune,Home & Kitchen|Books|Grocery|Beauty,2025-04-11,2017,46
+U0291,Anna Davis,user291@email.com,45-54,Male,Pune,Books,2026-01-22,3935,84
+U0292,Pooja Brown,user292@email.com,55-64,Male,London,Clothing|Toys|Grocery,2024-06-03,1646,36
+U0293,Anthony Jones,user293@email.com,45-54,Male,Kolkata,Clothing|Electronics|Toys|Beauty,2024-11-06,195,62
+U0294,Chris Sharma,user294@email.com,55-64,Female,Los Angeles,Grocery|Electronics|Sports|Beauty,2024-09-29,341,24
+U0295,Emily Martinez,user295@email.com,55-64,Other,Los Angeles,Books|Toys,2026-02-02,4376,3
+U0296,Sarah Martinez,user296@email.com,45-54,Male,Hyderabad,Clothing,2024-10-19,4292,22
+U0297,Amit Patel,user297@email.com,65+,Other,Mumbai,Home & Kitchen|Electronics,2025-09-14,1815,91
+U0298,Anthony Williams,user298@email.com,65+,Male,Ahmedabad,Beauty|Toys,2025-02-26,1687,88
+U0299,Lisa Martinez,user299@email.com,18-24,Male,London,Sports|Electronics|Home & Kitchen,2025-03-08,3292,5
+U0300,Anna Jones,user300@email.com,55-64,Male,Los Angeles,Clothing|Books|Grocery,2024-03-26,2537,26
+U0301,Isabella Singh,user301@email.com,65+,Male,Pune,Clothing|Sports|Home & Kitchen|Electronics,2025-07-07,4916,1
+U0302,Harper Johnson,user302@email.com,65+,Female,Bangalore,Home & Kitchen|Books,2025-11-26,944,20
+U0303,Priya Williams,user303@email.com,25-34,Other,Hyderabad,Grocery|Books,2024-04-11,3262,36
+U0304,Vikram Martinez,user304@email.com,35-44,Other,Kolkata,Home & Kitchen,2025-02-12,1655,11
+U0305,Anjali Anderson,user305@email.com,25-34,Male,New York,Toys,2024-11-18,895,14
+U0306,William Johnson,user306@email.com,45-54,Male,Delhi,Electronics,2025-01-01,3038,56
+U0307,Anna Wilson,user307@email.com,55-64,Male,London,Electronics|Books,2025-05-02,358,72
+U0308,John Jones,user308@email.com,35-44,Female,Bangalore,Toys|Home & Kitchen|Books,2026-01-25,3205,48
+U0309,Anna Martinez,user309@email.com,55-64,Male,Chennai,Electronics|Sports,2024-05-19,3595,3
+U0310,Joshua Williams,user310@email.com,25-34,Other,New York,Sports|Home & Kitchen|Grocery,2025-05-02,464,14
+U0311,David Singh,user311@email.com,55-64,Other,Mumbai,Books|Sports,2026-02-12,1175,13
+U0312,William Smith,user312@email.com,45-54,Male,Los Angeles,Clothing,2024-08-20,980,28
+U0313,Mike Moore,user313@email.com,55-64,Male,Mumbai,Clothing|Sports|Books|Grocery,2025-02-20,3683,95
+U0314,Sophia Anderson,user314@email.com,55-64,Female,Hyderabad,Toys|Home & Kitchen|Electronics|Grocery,2025-03-20,1833,18
+U0315,Matthew Martin,user315@email.com,65+,Male,Pune,Sports|Toys|Books,2026-03-02,3536,38
+U0316,Anna Johnson,user316@email.com,45-54,Female,Singapore,Clothing|Home & Kitchen,2024-06-20,2891,26
+U0317,Harper Singh,user317@email.com,45-54,Female,Singapore,Toys|Electronics|Clothing|Sports,2025-04-12,2670,85
+U0318,Harper Jones,user318@email.com,65+,Other,Chennai,Electronics|Books,2025-09-09,4656,24
+U0319,Amelia Wilson,user319@email.com,55-64,Female,Hyderabad,Electronics|Toys|Home & Kitchen,2024-11-27,890,69
+U0320,Joshua Martinez,user320@email.com,55-64,Female,Mumbai,Electronics|Sports,2024-09-05,1283,84
+U0321,Steven Thomas,user321@email.com,45-54,Male,Ahmedabad,Electronics,2025-02-21,4648,85
+U0322,Emma Rodriguez,user322@email.com,65+,Other,Los Angeles,Clothing|Grocery,2025-09-02,1234,52
+U0323,Anthony Wilson,user323@email.com,25-34,Other,Bangalore,Books|Grocery|Clothing|Toys,2024-06-18,289,86
+U0324,Chris Williams,user324@email.com,18-24,Male,Mumbai,Books,2025-12-21,2566,45
+U0325,Robert Jones,user325@email.com,25-34,Female,Delhi,Books|Grocery|Electronics,2024-11-22,2773,90
+U0326,Emma Martinez,user326@email.com,35-44,Male,New York,Sports|Home & Kitchen,2025-01-22,970,68
+U0327,Andrew Garcia,user327@email.com,55-64,Other,London,Grocery|Books|Home & Kitchen|Beauty,2024-05-13,1201,56
+U0328,Chris Johnson,user328@email.com,25-34,Female,Ahmedabad,Toys|Home & Kitchen|Beauty|Grocery,2024-04-18,2968,56
+U0329,Pooja Moore,user329@email.com,25-34,Female,Mumbai,Books|Sports|Beauty|Clothing,2026-01-12,1451,17
+U0330,Mia Kumar,user330@email.com,25-34,Male,London,Books|Sports,2024-03-25,680,45
+U0331,Priya Smith,user331@email.com,55-64,Other,Pune,Books|Clothing,2025-07-08,1573,65
+U0332,Isabella Thomas,user332@email.com,18-24,Female,Hyderabad,Beauty|Books,2025-07-22,2511,33
+U0333,Joshua Singh,user333@email.com,35-44,Male,Kolkata,Home & Kitchen|Sports|Grocery|Beauty,2025-11-10,87,94
+U0334,Rahul Smith,user334@email.com,35-44,Female,Chennai,Clothing|Electronics|Beauty|Sports,2024-04-09,3073,42
+U0335,Amelia Thomas,user335@email.com,45-54,Female,Singapore,Sports|Toys|Books,2025-06-29,4525,24
+U0336,Priya Martinez,user336@email.com,35-44,Male,Ahmedabad,Books,2024-10-18,929,2
+U0337,Tom Brown,user337@email.com,25-34,Male,Bangalore,Home & Kitchen|Toys|Grocery,2025-07-24,715,9
+U0338,John Smith,user338@email.com,65+,Female,Los Angeles,Sports,2024-08-04,3774,80
+U0339,Charlotte Brown,user339@email.com,55-64,Male,Mumbai,Electronics|Books,2025-12-30,1520,11
+U0340,Emily Smith,user340@email.com,45-54,Other,Chennai,Beauty|Books,2026-01-01,3169,41
+U0341,Neha Miller,user341@email.com,45-54,Male,Singapore,Sports|Electronics|Toys|Grocery,2026-01-20,3625,23
+U0342,Amit Smith,user342@email.com,18-24,Male,Chennai,Sports|Grocery|Clothing,2025-09-11,1015,89
+U0343,David Miller,user343@email.com,25-34,Female,Chennai,Clothing|Books,2024-07-25,2430,76
+U0344,Andrew Thomas,user344@email.com,65+,Female,Chennai,Grocery|Clothing|Sports|Home & Kitchen,2024-09-26,57,83
+U0345,Daniel Martinez,user345@email.com,25-34,Male,Mumbai,Toys,2025-04-05,494,79
+U0346,Evelyn Williams,user346@email.com,65+,Other,Ahmedabad,Home & Kitchen,2025-05-01,4818,98
+U0347,Amelia Jackson,user347@email.com,65+,Male,Los Angeles,Books|Electronics|Sports,2024-11-17,3034,63
+U0348,Mia Anderson,user348@email.com,35-44,Other,Singapore,Electronics|Grocery,2025-09-30,349,88
+U0349,Mark Singh,user349@email.com,45-54,Female,Hyderabad,Toys|Clothing|Electronics|Books,2025-10-18,1163,94
+U0350,Steven Singh,user350@email.com,18-24,Male,Hyderabad,Sports|Electronics|Toys|Beauty,2025-01-03,1415,19
+U0351,Pooja Garcia,user351@email.com,25-34,Male,Mumbai,Toys|Home & Kitchen|Sports|Books,2025-09-02,177,63
+U0352,Harper Garcia,user352@email.com,35-44,Other,Kolkata,Electronics|Toys,2024-07-10,4088,55
+U0353,Evelyn Garcia,user353@email.com,45-54,Other,Mumbai,Home & Kitchen|Beauty|Sports,2024-03-31,3905,77
+U0354,Matthew Jones,user354@email.com,25-34,Other,Ahmedabad,Clothing|Electronics,2026-03-10,2523,80
+U0355,James Sharma,user355@email.com,65+,Female,London,Home & Kitchen|Grocery|Toys|Clothing,2025-06-08,2794,92
+U0356,Amelia Jones,user356@email.com,35-44,Other,Ahmedabad,Beauty,2024-12-21,3031,53
+U0357,Sophia Miller,user357@email.com,35-44,Other,Chennai,Toys|Clothing|Sports,2024-09-01,2791,73
+U0358,Charlotte Miller,user358@email.com,25-34,Female,London,Electronics|Clothing,2025-07-11,4002,72
+U0359,Raj Smith,user359@email.com,35-44,Other,Delhi,Sports|Grocery|Toys|Beauty,2024-09-28,4021,59
+U0360,Isabella Williams,user360@email.com,45-54,Female,Chennai,Sports|Toys|Beauty,2024-11-23,2020,28
+U0361,John Sharma,user361@email.com,35-44,Other,Ahmedabad,Grocery|Sports,2024-11-12,2573,77
+U0362,Vikram Miller,user362@email.com,65+,Male,Los Angeles,Grocery,2026-01-20,1596,67
+U0363,Amit Martinez,user363@email.com,25-34,Female,Pune,Grocery,2025-06-29,1673,18
+U0364,Matthew Smith,user364@email.com,18-24,Other,London,Home & Kitchen|Sports|Electronics|Toys,2024-12-21,3129,71
+U0365,James Jackson,user365@email.com,45-54,Female,Delhi,Toys|Sports|Home & Kitchen,2024-03-30,4968,58
+U0366,Matthew Garcia,user366@email.com,55-64,Male,Hyderabad,Home & Kitchen,2026-01-29,2674,70
+U0367,Raj Patel,user367@email.com,25-34,Female,Singapore,Beauty|Books|Electronics|Sports,2025-02-11,1458,41
+U0368,Mike Martin,user368@email.com,35-44,Female,Los Angeles,Beauty,2025-11-08,4068,8
+U0369,David Jones,user369@email.com,25-34,Male,New York,Electronics|Beauty,2025-03-20,2925,43
+U0370,Emily Singh,user370@email.com,35-44,Male,Ahmedabad,Beauty|Grocery|Electronics|Books,2024-04-11,1269,70
+U0371,Emily Miller,user371@email.com,45-54,Male,Delhi,Electronics|Home & Kitchen|Beauty,2024-06-01,4568,3
+U0372,Sarah Martin,user372@email.com,65+,Male,Ahmedabad,Beauty,2025-08-11,1905,19
+U0373,Tom Thomas,user373@email.com,35-44,Female,Pune,Beauty|Grocery|Sports|Electronics,2026-02-27,3399,70
+U0374,David Johnson,user374@email.com,25-34,Other,Mumbai,Electronics|Grocery,2024-11-05,58,44
+U0375,Emily Moore,user375@email.com,35-44,Other,Bangalore,Electronics|Home & Kitchen|Grocery|Beauty,2024-06-19,2305,34
+U0376,Anjali Patel,user376@email.com,55-64,Female,Bangalore,Grocery|Sports,2025-09-04,2679,33
+U0377,Harper Brown,user377@email.com,65+,Female,Ahmedabad,Toys,2024-07-14,4192,98
+U0378,Harper Miller,user378@email.com,25-34,Male,Mumbai,Home & Kitchen|Books|Toys|Clothing,2024-08-17,2446,88
+U0379,Olivia Moore,user379@email.com,35-44,Female,Ahmedabad,Electronics,2024-08-20,2067,27
+U0380,Amit Smith,user380@email.com,35-44,Male,Chennai,Books|Home & Kitchen,2024-10-28,3183,92
+U0381,Anthony Wilson,user381@email.com,45-54,Other,Bangalore,Toys|Grocery|Clothing|Sports,2024-05-09,2035,9
+U0382,Chris Smith,user382@email.com,18-24,Other,Mumbai,Grocery,2026-03-23,2485,56
+U0383,Steven Moore,user383@email.com,25-34,Male,Mumbai,Electronics|Books|Home & Kitchen,2025-01-14,3054,9
+U0384,Isabella Singh,user384@email.com,65+,Male,Kolkata,Home & Kitchen,2025-05-18,1161,33
+U0385,Abigail Miller,user385@email.com,18-24,Other,Singapore,Toys,2025-09-26,117,14
+U0386,Emily Davis,user386@email.com,45-54,Other,Singapore,Grocery|Beauty|Books,2024-08-24,3929,8
+U0387,Anna Miller,user387@email.com,18-24,Female,London,Beauty|Toys|Electronics|Books,2024-12-02,3378,22
+U0388,John Moore,user388@email.com,18-24,Other,Delhi,Grocery|Books|Electronics,2025-08-28,2189,3
+U0389,Isabella Miller,user389@email.com,25-34,Other,Ahmedabad,Beauty,2024-08-24,3566,71
+U0390,Priya Davis,user390@email.com,65+,Other,Mumbai,Books|Beauty|Grocery,2025-03-12,3737,60
+U0391,Vikram Garcia,user391@email.com,35-44,Other,Hyderabad,Books|Toys,2024-06-07,2840,52
+U0392,Emma Moore,user392@email.com,45-54,Female,Ahmedabad,Grocery|Home & Kitchen|Books,2024-11-02,4442,52
+U0393,Amelia Singh,user393@email.com,18-24,Other,Kolkata,Books|Sports,2024-06-01,3822,57
+U0394,Vikram Garcia,user394@email.com,18-24,Female,New York,Books|Grocery,2024-06-14,1306,73
+U0395,Tom Miller,user395@email.com,65+,Female,Delhi,Home & Kitchen|Grocery|Clothing|Beauty,2024-10-07,850,73
+U0396,John Rodriguez,user396@email.com,55-64,Other,Bangalore,Books|Electronics,2025-11-24,2666,93
+U0397,Amelia Taylor,user397@email.com,45-54,Other,London,Electronics|Grocery|Sports|Toys,2024-04-18,871,28
+U0398,Abigail Jones,user398@email.com,65+,Male,Singapore,Home & Kitchen,2024-11-01,1182,9
+U0399,Mia Davis,user399@email.com,45-54,Female,Chennai,Electronics,2026-02-27,132,3
+U0400,Matthew Brown,user400@email.com,25-34,Male,London,Home & Kitchen,2025-07-07,3707,15
+U0401,Evelyn Patel,user401@email.com,65+,Female,Mumbai,Books|Electronics|Sports,2025-08-22,2488,54
+U0402,Pooja Anderson,user402@email.com,65+,Other,Los Angeles,Toys,2026-02-19,4095,40
+U0403,Mark Smith,user403@email.com,35-44,Other,Ahmedabad,Home & Kitchen|Electronics|Books|Grocery,2024-06-26,2875,87
+U0404,Priya Smith,user404@email.com,45-54,Male,Ahmedabad,Toys,2025-07-08,4454,11
+U0405,Emily Davis,user405@email.com,65+,Other,London,Toys,2025-02-28,2763,30
+U0406,Raj Johnson,user406@email.com,35-44,Female,New York,Electronics|Grocery|Toys|Beauty,2026-03-13,1051,75
+U0407,Jane Thomas,user407@email.com,45-54,Male,New York,Toys|Sports,2024-04-09,4628,49
+U0408,Vikram Martin,user408@email.com,65+,Male,Kolkata,Toys,2025-09-26,3700,37
+U0409,James Johnson,user409@email.com,35-44,Other,Hyderabad,Home & Kitchen|Books|Toys|Beauty,2025-09-01,3949,62
+U0410,Sophia Smith,user410@email.com,45-54,Other,London,Clothing|Beauty,2025-05-18,1496,28
+U0411,Charlotte Moore,user411@email.com,45-54,Male,Singapore,Home & Kitchen|Beauty|Toys|Books,2025-11-08,4957,72
+U0412,Jane Wilson,user412@email.com,45-54,Female,Singapore,Beauty|Books|Grocery|Sports,2024-06-11,4452,13
+U0413,Andrew Anderson,user413@email.com,18-24,Female,Pune,Home & Kitchen|Beauty|Clothing|Sports,2024-05-12,2929,60
+U0414,Harper Thomas,user414@email.com,25-34,Male,Delhi,Sports,2025-12-25,4672,23
+U0415,Robert Wilson,user415@email.com,65+,Other,Hyderabad,Toys|Beauty|Books,2025-09-15,4768,52
+U0416,Lisa Taylor,user416@email.com,18-24,Male,Chennai,Grocery|Home & Kitchen,2024-04-04,3200,1
+U0417,Amelia Johnson,user417@email.com,55-64,Male,Delhi,Beauty|Sports|Home & Kitchen,2025-04-30,1996,61
+U0418,Olivia Miller,user418@email.com,65+,Female,Ahmedabad,Electronics|Beauty|Home & Kitchen|Toys,2024-09-03,4435,9
+U0419,Anna Jones,user419@email.com,55-64,Male,Delhi,Home & Kitchen|Grocery|Toys|Books,2024-06-20,3387,80
+U0420,Amelia Davis,user420@email.com,35-44,Female,Mumbai,Beauty|Clothing|Sports|Electronics,2026-02-23,1577,85
+U0421,Amelia Kumar,user421@email.com,45-54,Other,Chennai,Toys|Grocery,2024-10-18,3330,82
+U0422,James Davis,user422@email.com,55-64,Other,Kolkata,Home & Kitchen|Electronics|Grocery|Beauty,2025-01-20,543,71
+U0423,Emily Jones,user423@email.com,65+,Male,Hyderabad,Clothing|Sports|Electronics,2024-05-27,2797,38
+U0424,Vikram Jackson,user424@email.com,35-44,Female,Ahmedabad,Clothing|Toys|Books|Grocery,2024-04-11,4589,87
+U0425,Rahul Jones,user425@email.com,45-54,Female,Delhi,Books|Grocery|Clothing|Toys,2024-06-15,515,32
+U0426,Isabella Rodriguez,user426@email.com,35-44,Other,New York,Books|Sports,2025-07-21,4636,24
+U0427,Mark Martinez,user427@email.com,25-34,Female,New York,Grocery|Sports|Toys|Electronics,2024-05-07,1542,98
+U0428,Tom Martinez,user428@email.com,25-34,Other,London,Books|Home & Kitchen|Electronics,2024-08-05,4260,22
+U0429,Lisa Martinez,user429@email.com,65+,Male,Chennai,Sports|Books|Electronics,2025-03-05,2012,50
+U0430,Raj Rodriguez,user430@email.com,55-64,Female,New York,Sports|Toys|Grocery,2026-01-09,2068,15
+U0431,Steven Taylor,user431@email.com,45-54,Male,Delhi,Grocery|Electronics,2024-12-13,4510,74
+U0432,Isabella Thomas,user432@email.com,55-64,Female,Chennai,Beauty|Electronics|Books,2024-11-07,4876,13
+U0433,Raj Singh,user433@email.com,45-54,Female,Delhi,Sports|Beauty,2025-03-18,446,5
+U0434,David Rodriguez,user434@email.com,18-24,Other,New York,Sports|Clothing|Beauty,2024-04-19,3467,26
+U0435,Mike Moore,user435@email.com,18-24,Male,Delhi,Grocery|Sports|Electronics,2025-07-20,1888,28
+U0436,Rahul Rodriguez,user436@email.com,55-64,Female,Chennai,Beauty|Grocery,2024-08-02,2594,97
+U0437,William Garcia,user437@email.com,45-54,Male,New York,Sports,2025-12-20,4679,94
+U0438,Isabella Anderson,user438@email.com,18-24,Male,Chennai,Electronics|Home & Kitchen|Toys|Grocery,2025-10-05,1421,28
+U0439,Isabella Brown,user439@email.com,18-24,Male,London,Clothing|Grocery|Toys,2025-02-21,3654,27
+U0440,William Brown,user440@email.com,18-24,Female,Singapore,Toys|Home & Kitchen|Books|Electronics,2024-07-02,3114,2
+U0441,Vikram Rodriguez,user441@email.com,25-34,Other,Ahmedabad,Books|Sports|Beauty|Electronics,2024-10-20,3177,56
+U0442,Olivia Patel,user442@email.com,25-34,Other,Delhi,Sports|Clothing|Electronics|Home & Kitchen,2025-08-12,2574,45
+U0443,Harper Rodriguez,user443@email.com,25-34,Other,Kolkata,Clothing|Grocery,2024-11-28,198,87
+U0444,Rahul Davis,user444@email.com,65+,Other,Delhi,Beauty|Electronics|Grocery|Sports,2025-03-20,3120,2
+U0445,Priya Singh,user445@email.com,65+,Female,Pune,Clothing,2025-07-05,2852,29
+U0446,Isabella Patel,user446@email.com,35-44,Female,Bangalore,Electronics|Clothing,2024-08-01,4236,76
+U0447,Neha Miller,user447@email.com,18-24,Female,Hyderabad,Electronics,2025-12-21,1300,11
+U0448,Anjali Johnson,user448@email.com,35-44,Male,New York,Toys|Home & Kitchen|Sports,2025-10-29,3570,35
+U0449,Emma Davis,user449@email.com,45-54,Female,Bangalore,Electronics,2025-12-19,427,73
+U0450,Emma Martinez,user450@email.com,55-64,Female,Pune,Electronics|Beauty,2025-09-04,4936,91
+U0451,David Williams,user451@email.com,18-24,Female,Bangalore,Toys,2024-09-03,3022,92
+U0452,Emma Jones,user452@email.com,55-64,Male,Chennai,Books,2025-09-29,2230,65
+U0453,Jane Thomas,user453@email.com,55-64,Male,Pune,Sports|Beauty,2024-11-28,1277,16
+U0454,Sophia Jackson,user454@email.com,35-44,Other,Kolkata,Electronics|Toys|Home & Kitchen|Beauty,2025-07-12,1327,81
+U0455,Mike Williams,user455@email.com,45-54,Male,Mumbai,Toys|Grocery|Electronics,2024-04-29,3235,70
+U0456,Vikram Kumar,user456@email.com,55-64,Female,London,Clothing|Toys|Sports,2024-10-03,3339,21
+U0457,Amit Anderson,user457@email.com,25-34,Male,Chennai,Books,2025-05-22,946,77
+U0458,Andrew Kumar,user458@email.com,45-54,Female,Hyderabad,Books,2024-11-10,1627,96
+U0459,Jane Miller,user459@email.com,45-54,Other,Bangalore,Sports|Books|Toys|Electronics,2025-07-16,1165,2
+U0460,William Wilson,user460@email.com,35-44,Female,Pune,Toys|Sports|Home & Kitchen|Electronics,2025-11-10,3406,6
+U0461,Sophia Jones,user461@email.com,65+,Male,Kolkata,Beauty|Sports|Electronics,2025-02-21,3550,9
+U0462,Matthew Patel,user462@email.com,55-64,Other,Ahmedabad,Toys,2026-01-13,2887,42
+U0463,Robert Martinez,user463@email.com,55-64,Male,Mumbai,Sports,2024-03-25,4600,34
+U0464,Sarah Smith,user464@email.com,55-64,Male,London,Beauty|Electronics|Clothing,2025-04-15,3770,44
+U0465,Anthony Martinez,user465@email.com,35-44,Male,New York,Toys,2024-11-09,3550,97
+U0466,Amit Johnson,user466@email.com,65+,Other,Singapore,Sports,2025-03-02,2704,84
+U0467,Joshua Martin,user467@email.com,35-44,Male,Bangalore,Home & Kitchen|Grocery,2025-02-23,2259,50
+U0468,William Johnson,user468@email.com,18-24,Female,Mumbai,Electronics|Toys,2024-08-18,1586,53
+U0469,Anna Singh,user469@email.com,55-64,Other,Kolkata,Beauty|Toys,2025-10-07,306,33
+U0470,Raj Williams,user470@email.com,25-34,Female,Bangalore,Home & Kitchen|Beauty|Books|Electronics,2025-04-07,3048,60
+U0471,Daniel Moore,user471@email.com,55-64,Other,Singapore,Books|Grocery|Home & Kitchen,2024-05-09,4831,66
+U0472,Isabella Jackson,user472@email.com,25-34,Male,Mumbai,Toys|Sports|Clothing|Grocery,2025-05-20,4086,92
+U0473,Harper Johnson,user473@email.com,55-64,Female,Kolkata,Sports,2024-09-01,1831,100
+U0474,William Davis,user474@email.com,45-54,Male,Delhi,Clothing|Books|Electronics,2025-01-18,4641,42
+U0475,Mia Williams,user475@email.com,25-34,Male,Los Angeles,Home & Kitchen|Clothing|Sports|Beauty,2025-01-01,3325,55
+U0476,Anna Singh,user476@email.com,45-54,Male,Hyderabad,Home & Kitchen|Sports|Toys,2024-11-10,4029,50
+U0477,Pooja Miller,user477@email.com,45-54,Female,Chennai,Electronics|Grocery|Home & Kitchen,2025-04-13,1304,76
+U0478,Anthony Moore,user478@email.com,45-54,Male,Delhi,Home & Kitchen,2026-03-15,1229,69
+U0479,Evelyn Anderson,user479@email.com,18-24,Other,London,Beauty|Toys,2024-11-26,1454,4
+U0480,Tom Martinez,user480@email.com,35-44,Other,London,Home & Kitchen|Beauty|Toys,2025-05-10,2704,12
+U0481,Mike Moore,user481@email.com,18-24,Male,Los Angeles,Electronics,2025-09-30,3201,62
+U0482,Chris Rodriguez,user482@email.com,55-64,Female,Los Angeles,Grocery,2025-11-02,532,59
+U0483,Daniel Garcia,user483@email.com,65+,Other,New York,Toys,2024-07-10,1833,88
+U0484,Matthew Johnson,user484@email.com,45-54,Female,London,Toys|Clothing,2024-12-15,2938,65
+U0485,Mia Martinez,user485@email.com,65+,Other,Pune,Electronics|Clothing|Sports|Books,2025-08-20,1971,59
+U0486,Anna Jones,user486@email.com,18-24,Male,Mumbai,Sports,2025-12-03,3677,16
+U0487,Anna Williams,user487@email.com,35-44,Female,Singapore,Electronics|Books|Toys,2025-01-02,3357,15
+U0488,Anjali Moore,user488@email.com,35-44,Other,Chennai,Beauty|Sports|Home & Kitchen|Electronics,2025-09-08,2826,8
+U0489,Sarah Johnson,user489@email.com,35-44,Female,Bangalore,Toys|Books|Electronics|Sports,2024-12-18,1088,41
+U0490,Evelyn Sharma,user490@email.com,55-64,Other,Bangalore,Sports,2025-07-10,3406,11
+U0491,Priya Sharma,user491@email.com,25-34,Male,Bangalore,Toys|Sports,2025-08-28,1478,53
+U0492,Mike Smith,user492@email.com,65+,Female,Singapore,Books|Sports|Beauty,2025-12-06,3955,98
+U0493,Amit Miller,user493@email.com,25-34,Male,Hyderabad,Clothing|Grocery|Toys,2024-07-04,1611,55
+U0494,Mike Wilson,user494@email.com,65+,Other,New York,Toys|Beauty|Sports,2025-04-17,146,52
+U0495,Pooja Martin,user495@email.com,18-24,Female,Pune,Electronics|Sports|Grocery|Home & Kitchen,2024-12-18,2168,38
+U0496,Mike Davis,user496@email.com,65+,Other,Kolkata,Grocery|Beauty|Toys|Home & Kitchen,2026-02-10,1816,57
+U0497,Sophia Kumar,user497@email.com,18-24,Female,Mumbai,Grocery,2024-09-21,4477,53
+U0498,Jane Thomas,user498@email.com,65+,Other,Kolkata,Toys,2024-08-06,1748,68
+U0499,Anjali Martinez,user499@email.com,18-24,Male,Pune,Sports|Grocery|Books,2025-08-30,116,87
+U0500,Evelyn Williams,user500@email.com,35-44,Other,Chennai,Beauty|Toys|Home & Kitchen|Sports,2025-10-01,2394,85
