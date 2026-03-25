@@ -125,19 +125,19 @@ async function sendMessage() {
         hideTypingIndicator();
 
         if (data.success) {
-            // Add bot response
-            addBotMessage(data.response, data.products, data.action);
+            // Add bot response with follow-up support
+            addBotMessage(data.response, data.products, data.action, data.follow_up);
 
             // Update cart count if needed
             if (data.action === 'show_cart') {
                 updateCartCount(data.products.length);
             }
         } else {
-            addMessage('Sorry, I encountered an error. Please try again.', 'bot');
+            addMessage('Oops! Something went wrong. Let me try again... 😅', 'bot');
         }
     } catch (error) {
         hideTypingIndicator();
-        addMessage('Unable to connect to the server. Please check your connection.', 'bot');
+        addMessage('Unable to connect to the server. Please check your connection. 🔌', 'bot');
         console.error('Chat error:', error);
     }
 }
@@ -161,7 +161,7 @@ function addMessage(content, type) {
     scrollToBottom();
 }
 
-function addBotMessage(text, products, action) {
+function addBotMessage(text, products, action, followUp = null) {
     const messageDiv = document.createElement('div');
     messageDiv.className = 'message bot-message';
 
@@ -174,13 +174,31 @@ function addBotMessage(text, products, action) {
         `;
     }
 
+    // Handle follow-up question as clickable suggestion
+    let followUpHtml = '';
+    if (followUp) {
+        followUpHtml = `
+            <div class="follow-up-suggestion">
+                <button class="follow-up-btn" data-message="${followUp}">
+                    <i class="fas fa-lightbulb"></i> ${followUp}
+                </button>
+            </div>
+        `;
+    }
+
+    // Format text with markdown-like formatting (bold, etc.)
+    let formattedText = text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>');
+
     messageDiv.innerHTML = `
         <div class="message-avatar">
             <i class="fas fa-robot"></i>
         </div>
         <div class="message-content">
-            <p>${text}</p>
+            <p>${formattedText}</p>
             ${productsHtml}
+            ${followUpHtml}
         </div>
     `;
 
@@ -204,6 +222,15 @@ function addBotMessage(text, products, action) {
             sendFeedback(btn.dataset.productId, btn.dataset.type);
         });
     });
+
+    // Add event listener for follow-up button
+    const followUpBtn = messageDiv.querySelector('.follow-up-btn');
+    if (followUpBtn) {
+        followUpBtn.addEventListener('click', () => {
+            chatInput.value = followUpBtn.dataset.message;
+            sendMessage();
+        });
+    }
 
     scrollToBottom();
 }

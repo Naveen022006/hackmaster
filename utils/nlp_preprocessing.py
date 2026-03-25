@@ -142,14 +142,10 @@ class EntityExtractor:
     """Extract entities from user messages"""
 
     def __init__(self):
-        # Main categories matching the dataset
+        # Main categories matching the dataset (must match products.csv exactly)
         self.categories = [
             'electronics', 'clothing', 'home & kitchen', 'sports', 'beauty',
-            'books', 'toys', 'grocery', 'smartphones', 'laptops', 'headphones',
-            'shoes', 'watches', 'bags', 'furniture', 't-shirts', 'jeans',
-            'dresses', 'jackets', 'tv', 'camera', 'tablet', 'smartwatch',
-            'microwave', 'air fryer', 'running shoes', 'yoga mat', 'makeup',
-            'perfume', 'fiction', 'rice', 'flour', 'cooking oil'
+            'books', 'toys', 'grocery'
         ]
 
         # Category aliases - maps variations to standard category names

@@ -364,6 +364,39 @@ body {
     margin-top: 16px;
 }
 
+/* Follow-up Suggestions */
+.follow-up-suggestion {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.follow-up-btn {
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-color));
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+}
+
+.follow-up-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.follow-up-btn i {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+}
+
 /* Chat Input */
 .chat-input-container {
     padding: 16px 24px;
